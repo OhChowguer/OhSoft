@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>flavr popup</title>
+    
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel='stylesheet' type='text/css' href='fonts/lato.css'>    
+    
+	<!-- DEMO PAGE CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight/default.css" />    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- END DEMO PAGE CSS -->
+    
+    <!-- flavr CSS -->
+    <link rel="stylesheet" type="text/css" href="flavr/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="flavr/css/flavr.css" />
+	<!-- END flavr CSS -->
+		
+</head>
+    
+<body class="parent">
+    <div class="container">                
+        
+        <div class="intro">
+            
+            <nav class="navbar navbar-default demo-navbar" role="navigation">
+                
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">flavr</a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="demo-navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="./index.html">Demo</a></li>                         
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="docs.html#overview">Overview</a></li>
+                                <li><a href="docs.html#installation">Installation</a></li>
+                                <li><a href="docs.html#get-started">Get Started</a></li>
+                                <li class="divider"></li>
+                                <li><a href="docs.html#available-options">Available Options</a></li>
+                                <li><a href="docs.html#properties">Properties</a></li>
+                                <li><a href="docs.html#helper-methods">Helper Methods</a></li>
+                                <li class="divider"></li>
+                                <li><a href="docs.html#browser-supports">Browser Supports</a></li>
+                                <li><a href="docs.html#product-supports">Product Supports</a></li>
+                                <li><a href="docs.html#credits">Credits</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>                    
+                </div>                 
+            </nav>
+            
+            <div class="row intro-heading">
+                <div class="col-xs-12 left-span">
+                    <h1 class="welcome">flavr is now here!</h1>
+                    <div class="overview">
+                        <b>flavr</b> is a freshly build stylish dialog plugin for your next flat website. You'll love <b>flavr</b>, have a look!
+                    </div>
+                    <div class="actions">
+                        <a href="index.html" class="btn btn-default btn-download filled">Demo</a>
+                        <a href="docs.html" class="btn btn-default btn-manual">Documentation</a>
+                    </div>
+                </div>
+                
+                <!--
+                <div class="col-xs-4 right-span">                    
+                    <img src="images/demo.png" />                    
+                </div>
+                -->
+                
+            </div>            
+            
+        </div>
+        
+        <div class="content">
+            
+            <div class="livedemo clearfix">
+            
+                <!-------------------------------------------------------------------------------------------------------------
+                    SIMPLE ALERT
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-alert">
+                    <div class="demo-title">Simple Alert</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> is designed to be able to run with minimal cofiguration
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr('Hello World!');</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    CONFIRM DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-confirm">
+                    <div class="demo-title">Confirm Dialog</div>
+                    
+                    <p class="demo-desc">
+                        A confirm dialog with two preset buttons
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content     : 'Are you sure to delete your memories?',
+    dialog      : 'confirm',
+    onConfirm   : function(){
+        alert('Deleted');
+    },
+    onCancel    : function(){
+        alert('Canceled');
+    }
+});
+
+/*----- OR ----- */
+
+new $.flavr().confirm('Are you sure to delete your memories?', function(){ 
+    alert('Deleted');
+}, function(){
+    alert('Canceled');
+});</code></pre>
+                    </div>
+                    
+                </div>                            
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    PROMPT DIALOG
+                --------------------------------------------------------------------------------------------------------------->               
+                <div class="demo-block" id="demo-prompt">
+                    <div class="demo-title">Prompt Dialog</div>
+                    
+                    <p class="demo-desc">
+                        A better prompt dialog
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content     : 'How old are you?',
+    dialog      : 'prompt',
+    prompt      : { placeholder: 'Enter something' },
+    onConfirm   : function( $container, $prompt ){
+        alert( $prompt.val() );
+        return false;
+    },
+    onCancel    : function(){
+        alert('Canceled');
+    }
+});
+
+/*----- OR ----- */
+
+new $.flavr().prompt('Enter something', 'How old are you?', function( $container, $prompt ){
+    alert( $prompt.val() );
+    return false;
+}, function(){
+    alert('Canceled');
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    MULTIPLE DIALOGS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-multi-instance">
+                    <div class="demo-title">Multiple Dialog Instance</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> supports unlimited dialog instance/layer that will stack on the user screen
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content  : 'Nuff siad, here is the last one', 
+    position : 'top-right'
+}, function(){
+    new $.flavr({
+        content  : 'The stack is unlimited, pretty cool huh',
+        position : 'top-left'
+    }, function(){
+        new $.flavr({
+            content  : 'Here is the dialog #3',
+            position : 'bottom-right'
+        }, function(){
+            new $.flavr({
+                content  : 'Me dialog #2',
+                position : 'bottom-mid'
+            }, function(){
+                new $.flavr({
+                    content :'I am dialog #1',
+                    buttons : {
+                        exit    : { text: 'Close All', style: 'danger',
+                                    action: function(){
+                                        this.exit();
+                                    }
+                        },
+                        close   : {}
+                    }
+                });
+            });
+        });
+    });
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    MULTIPLE BUTTONS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-multi-buttons">
+                    <div class="demo-title">Multiple Buttons</div>
+                    
+                    <p class="demo-desc">
+                        You could add as many button as you wish to your dialog.
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content     : 'flavr box with multiple buttons',
+    buttons     : {
+        primary : { text: 'Primary', style: 'primary', 
+                    action: function(){
+                        alert('Primary button');
+                        return false;
+                    }
+        },
+        success : { text: 'Success', style: 'success',
+                    action: function(){
+                        alert('Mission succeed!');
+                        return false;
+                    }
+        },
+        info    : { text: 'Info', style: 'info',
+                    action: function(){
+                        alert('For your information');
+                        return false;
+                    }
+        },
+        warning : { text: 'Warning', style: 'warning',
+                    action: function(){
+                        alert('No good captain!');
+                        return false;
+                    }
+        },
+        danger  : { text: 'Danger', style: 'danger',
+                    action: function(){
+                        alert('Mission failed!');
+                        return false;
+                    }
+        },
+        close   : { style: 'default' }
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    STACKED BUTTONS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-stacked-buttons">
+                    <div class="demo-title">Stacked Buttons</div>
+                    
+                    <p class="demo-desc">
+                        Choose to display your buttons inline or stacked vertically
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    buttonDisplay   : 'stacked',
+    content         : 'flavr with stacked buttons',
+    buttons         : {
+        confirm     : { style: 'info' },
+        remove      : { style: 'danger' },
+        close       : { style: 'default' }
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    HTML DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-html">
+                    <div class="demo-title">HTML Content</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> accepts HTML contents by default. Set the html option to false to 
+                        prevent <b>flavr</b> accepting any HTML tags.
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">var html =  
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;text&quot; name=&quot;username&quot; ' +
+'       placeholder=&quot;Username&quot; /&gt;' +
+'   &lt;/div&gt;' +
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;password&quot; name=&quot;password&quot; ' +
+'       placeholder=&quot;Password&quot; /&gt;' +
+'   &lt;/div&gt;' +
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; ' +
+'       id=&quot;check&quot;/&gt;' +
+'       &lt;label for=&quot;check&quot;&gt;Remember me&lt;/label&gt;' +
+'   &lt;/div&gt;';
+        
+new $.flavr({                
+    title       : 'Form',
+    iconPath    : 'flavr/images/icons/',
+    icon        : 'email.png',
+    content     : 'HTML form example',
+    dialog      : 'form',
+    form        : { content: html, method: 'post' },
+    onSubmit    : function( $container, $form ){
+        alert( $form.serialize() );
+        return false;
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    MODELESS DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-modeless">
+                    <div class="demo-title">Modeless Dialog</div>
+                    
+                    <p class="demo-desc">
+                        Modeless is the reverse state of modal dialog which doesn't prevent the user to interact to the 
+                        rest elements of the page. 
+                        Modeless dialog might not working on IE 8 or any browser that didn't support <code>pointer-events</code> property
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                        <a href="#" class="btn btn-default btn-close">Close</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">var modeless = new $.flavr({
+    modal   : false,
+    content : 'This is a modeless dialog'
+});
+
+/* Closing the dialog */
+modeless.close();</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    AUTOCLOSED DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-autoclose">
+                    <div class="demo-title">Autoclosed Dialog</div>
+                    
+                    <p class="demo-desc">
+                        The following dialog will be auto-closed in 5 seconds
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content     : 'Autoclosing the dialog in 5 seconds',
+    autoclose   : true,
+    timeout     : 5000  /* Default timeout is 3 seconds */
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ALTERNATIVE CLOSING
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-alt-closing">
+                    <div class="demo-title">Alternative Closing</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> provides option to alternatively close the current dialog by 
+                        clicking the overlay or pressing the keyboard Escape button
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content      : 'Try clicking the overlay or pressing the escape button',
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ANIMATION
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-animation">
+                    <div class="demo-title">Setting up Animation</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> uses the popular <a href="http://daneden.github.io/animate.css/">animate.css </a>
+                        library created by <b>Daniel Eden</b> to provide some amazing CSS3 animation.
+                    </p>
+                    
+                    <div class="demo-select clearfix">
+                        <div class="col-xs-6 half">
+                            <select class="form-control animate-entrance">
+                                <optgroup label="Attention Seekers">
+                                  <option value="bounce">bounce</option>
+                                  <option value="flash">flash</option>
+                                  <option value="pulse">pulse</option>
+                                  <option value="rubberBand">rubberBand</option>
+                                  <option value="shake">shake</option>
+                                  <option value="swing">swing</option>
+                                  <option value="tada">tada</option>
+                                  <option value="wobble">wobble</option>
+                                </optgroup>
+
+                                <optgroup label="Bouncing Entrances">
+                                  <option value="bounceIn">bounceIn</option>
+                                  <option value="bounceInDown">bounceInDown</option>
+                                  <option value="bounceInLeft">bounceInLeft</option>
+                                  <option value="bounceInRight">bounceInRight</option>
+                                  <option value="bounceInUp">bounceInUp</option>
+                                </optgroup>
+
+                                <optgroup label="Bouncing Exits">
+                                  <option value="bounceOut">bounceOut</option>
+                                  <option value="bounceOutDown">bounceOutDown</option>
+                                  <option value="bounceOutLeft">bounceOutLeft</option>
+                                  <option value="bounceOutRight">bounceOutRight</option>
+                                  <option value="bounceOutUp">bounceOutUp</option>
+                                </optgroup>
+
+                                <optgroup label="Fading Entrances">
+                                  <option value="fadeIn">fadeIn</option>
+                                  <option value="fadeInDown">fadeInDown</option>
+                                  <option value="fadeInDownBig">fadeInDownBig</option>
+                                  <option value="fadeInLeft">fadeInLeft</option>
+                                  <option value="fadeInLeftBig">fadeInLeftBig</option>
+                                  <option value="fadeInRight">fadeInRight</option>
+                                  <option value="fadeInRightBig">fadeInRightBig</option>
+                                  <option value="fadeInUp">fadeInUp</option>
+                                  <option value="fadeInUpBig">fadeInUpBig</option>
+                                </optgroup>
+
+                                <optgroup label="Fading Exits">
+                                  <option value="fadeOut">fadeOut</option>
+                                  <option value="fadeOutDown">fadeOutDown</option>
+                                  <option value="fadeOutDownBig">fadeOutDownBig</option>
+                                  <option value="fadeOutLeft">fadeOutLeft</option>
+                                  <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                                  <option value="fadeOutRight">fadeOutRight</option>
+                                  <option value="fadeOutRightBig">fadeOutRightBig</option>
+                                  <option value="fadeOutUp">fadeOutUp</option>
+                                  <option value="fadeOutUpBig">fadeOutUpBig</option>
+                                </optgroup>
+
+                                <optgroup label="Flippers">
+                                  <option value="flip">flip</option>
+                                  <option value="flipInX">flipInX</option>
+                                  <option value="flipInY">flipInY</option>
+                                  <option value="flipOutX">flipOutX</option>
+                                  <option value="flipOutY">flipOutY</option>
+                                </optgroup>
+
+                                <optgroup label="Lightspeed">
+                                  <option value="lightSpeedIn">lightSpeedIn</option>
+                                  <option value="lightSpeedOut">lightSpeedOut</option>
+                                </optgroup>
+
+                                <optgroup label="Rotating Entrances">
+                                  <option value="rotateIn">rotateIn</option>
+                                  <option value="rotateInDownLeft">rotateInDownLeft</option>
+                                  <option value="rotateInDownRight">rotateInDownRight</option>
+                                  <option value="rotateInUpLeft">rotateInUpLeft</option>
+                                  <option value="rotateInUpRight">rotateInUpRight</option>
+                                </optgroup>
+
+                                <optgroup label="Rotating Exits">
+                                  <option value="rotateOut">rotateOut</option>
+                                  <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+                                  <option value="rotateOutDownRight">rotateOutDownRight</option>
+                                  <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                                  <option value="rotateOutUpRight">rotateOutUpRight</option>
+                                </optgroup>
+
+                                <optgroup label="Sliders">
+                                  <option value="slideInDown">slideInDown</option>
+                                  <option value="slideInLeft">slideInLeft</option>
+                                  <option value="slideInRight">slideInRight</option>
+                                  <option value="slideOutLeft">slideOutLeft</option>
+                                  <option value="slideOutRight">slideOutRight</option>
+                                  <option value="slideOutUp">slideOutUp</option>
+                                </optgroup>
+
+                                <optgroup label="Specials">
+                                  <option value="hinge">hinge</option>
+                                  <option value="rollIn">rollIn</option>
+                                  <option value="rollOut">rollOut</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-xs-6 half">
+                            <select class="form-control animate-closing">
+                                <optgroup label="Attention Seekers">
+                                  <option value="bounce">bounce</option>
+                                  <option value="flash">flash</option>
+                                  <option value="pulse">pulse</option>
+                                  <option value="rubberBand">rubberBand</option>
+                                  <option value="shake">shake</option>
+                                  <option value="swing">swing</option>
+                                  <option value="tada">tada</option>
+                                  <option value="wobble">wobble</option>
+                                </optgroup>
+
+                                <optgroup label="Bouncing Entrances">
+                                  <option value="bounceIn">bounceIn</option>
+                                  <option value="bounceInDown">bounceInDown</option>
+                                  <option value="bounceInLeft">bounceInLeft</option>
+                                  <option value="bounceInRight">bounceInRight</option>
+                                  <option value="bounceInUp">bounceInUp</option>
+                                </optgroup>
+
+                                <optgroup label="Bouncing Exits">
+                                  <option value="bounceOut">bounceOut</option>
+                                  <option value="bounceOutDown">bounceOutDown</option>
+                                  <option value="bounceOutLeft">bounceOutLeft</option>
+                                  <option value="bounceOutRight">bounceOutRight</option>
+                                  <option value="bounceOutUp">bounceOutUp</option>
+                                </optgroup>
+
+                                <optgroup label="Fading Entrances">
+                                  <option value="fadeIn">fadeIn</option>
+                                  <option value="fadeInDown">fadeInDown</option>
+                                  <option value="fadeInDownBig">fadeInDownBig</option>
+                                  <option value="fadeInLeft">fadeInLeft</option>
+                                  <option value="fadeInLeftBig">fadeInLeftBig</option>
+                                  <option value="fadeInRight">fadeInRight</option>
+                                  <option value="fadeInRightBig">fadeInRightBig</option>
+                                  <option value="fadeInUp">fadeInUp</option>
+                                  <option value="fadeInUpBig">fadeInUpBig</option>
+                                </optgroup>
+
+                                <optgroup label="Fading Exits">
+                                  <option value="fadeOut">fadeOut</option>
+                                  <option value="fadeOutDown">fadeOutDown</option>
+                                  <option value="fadeOutDownBig">fadeOutDownBig</option>
+                                  <option value="fadeOutLeft">fadeOutLeft</option>
+                                  <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                                  <option value="fadeOutRight">fadeOutRight</option>
+                                  <option value="fadeOutRightBig">fadeOutRightBig</option>
+                                  <option value="fadeOutUp">fadeOutUp</option>
+                                  <option value="fadeOutUpBig">fadeOutUpBig</option>
+                                </optgroup>
+
+                                <optgroup label="Flippers">
+                                  <option value="flip">flip</option>
+                                  <option value="flipInX">flipInX</option>
+                                  <option value="flipInY">flipInY</option>
+                                  <option value="flipOutX">flipOutX</option>
+                                  <option value="flipOutY">flipOutY</option>
+                                </optgroup>
+
+                                <optgroup label="Lightspeed">
+                                  <option value="lightSpeedIn">lightSpeedIn</option>
+                                  <option value="lightSpeedOut">lightSpeedOut</option>
+                                </optgroup>
+
+                                <optgroup label="Rotating Entrances">
+                                  <option value="rotateIn">rotateIn</option>
+                                  <option value="rotateInDownLeft">rotateInDownLeft</option>
+                                  <option value="rotateInDownRight">rotateInDownRight</option>
+                                  <option value="rotateInUpLeft">rotateInUpLeft</option>
+                                  <option value="rotateInUpRight">rotateInUpRight</option>
+                                </optgroup>
+
+                                <optgroup label="Rotating Exits">
+                                  <option value="rotateOut">rotateOut</option>
+                                  <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+                                  <option value="rotateOutDownRight">rotateOutDownRight</option>
+                                  <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                                  <option value="rotateOutUpRight">rotateOutUpRight</option>
+                                </optgroup>
+
+                                <optgroup label="Sliders">
+                                  <option value="slideInDown">slideInDown</option>
+                                  <option value="slideInLeft">slideInLeft</option>
+                                  <option value="slideInRight">slideInRight</option>
+                                  <option value="slideOutLeft">slideOutLeft</option>
+                                  <option value="slideOutRight">slideOutRight</option>
+                                  <option value="slideOutUp">slideOutUp</option>
+                                </optgroup>
+
+                                <optgroup label="Specials">
+                                  <option value="hinge">hinge</option>
+                                  <option value="rollIn">rollIn</option>
+                                  <option value="rollOut">rollOut</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">
+var select = $(this).parent().siblings('.demo-select');
+var entrance = select.find('.animate-entrance :selected').text();
+var closing = select.find('.animate-closing :selected').text();
+                
+new $.flavr({
+    animateEntrance : entrance,
+    animateClosing  : closing,
+    content         : 'Animation example'
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ATTENTION SEEKER
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-attention">
+                    <div class="demo-title">Attention Seeker Animation</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> provides several animation shortcut to seek your user attention
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    position        : 'top-mid',
+    content         : 'Attention seeker animation examples',
+    buttons         : {
+        swing       : { style: 'info', action: function(){ this.swing(); return false }},
+        shake       : { style: 'warning', action: function(){ this.shake(); return false }},
+        wobble      : { style: 'danger', action: function(){ this.wobble(); return false }},
+        flash       : { style: 'primary', action: function(){ this.flash(); return false }},
+        tada        : { style: 'info', action: function(){ this.tada(); return false }},
+        pulse       : { style: 'warning', action: function(){ this.pulse(); return false }},
+        bounce      : { style: 'danger', action: function(){ this.animate('bounce'); return false }},
+        close       : {}
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    DYNAMIC DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-dynamic">
+                    <div class="demo-title">Dynamic Dialog</div>
+                    
+                    <p class="demo-desc">
+                        Amazingly, <b>flavr</b> allows you to make a fullscreen dialog, 
+                        resize the dialog to specific height or width, change its content, 
+                        position and much more, on the fly
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </div>
+                    
+                    <div class="demo-code">                        
+                        <pre><code class="javascript">new $.flavr({
+    content     : 'Resize your Dialog',
+    buttons     : {
+        resize  : { text: 'Resize 700 x 300', style: 'info',
+                        action: function(){
+                            this.resize( 700, 300 );
+                            return false;
+                        }
+        },
+        full    : { text: 'Fullscreen', style: 'warning', 
+                    action: function(){
+                        this.fullscreen();
+                        return false;
+                    }
+        },
+        revert  : { text: 'Original Size', style: 'danger',
+                    action: function(){
+                        this.revert();
+                        return false;
+                    }
+        },
+        content : { text: 'Change Content', style: 'info',
+                    action: function(){
+                        this.content('&lt;p&gt;This is the new content&lt;/p&gt;&lt;br/&gt;&lt;p&gt;New line&lt;/p&gt;');
+                        return false;
+                    }
+        },
+        close   : {}
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    CALLBACKS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-callback">
+                    <div class="demo-title">Throw Callbacks</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> provides you the ability to throw callbacks at a particular stage and conditions 
+                        which will greatly help you building an advance dialog
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                        <a href="#" class="btn btn-default btn-show">Show</a>
+                    </div>
+                    
+                    <div class="demo-code">
+                        <pre><code class="javascript">new $.flavr({
+    content     : 'flavr callback examples',
+    buttons     : {
+        shake   : { style: 'primary', 
+                    action: function(){
+                        this.shake(function(){
+                            alert('Shake animation callback');
+                        });
+                        return false;
+                    }
+        },
+        hide    : { style: 'info', 
+                    action: function(){
+                        this.hide();
+                        return false;
+                    }
+        },
+        close   : { style: 'warning' }
+    },
+    onLoad      : function(){
+        alert('The plugin has been loaded');
+    },
+    onBuild     : function(){
+        alert('We have succesfully build the DOM elements');
+    },
+    onShow      : function(){
+        alert('The dialog has been shown');
+    },
+    onHide      : function(){
+        alert('Now hidding the dialog');
+    },
+    onClose     : function(){
+        alert('We\'re about to close the dialog');
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>                
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    IFRAME
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="demo-block" id="demo-iframe">
+                    <div class="demo-title">Iframe Supports</div>
+                    
+                    <p class="demo-desc">
+                        <b>flavr</b> supports iframe for video playback etc.
+                    </p>
+                    
+                    <div class="demo-actions">
+                        <a href="#" class="btn btn-default btn-code">Code</a>                        
+                        <a href="#" class="btn btn-default btn-show">Show</a>
+                    </div>
+                    
+                    <div class="demo-code">                        
+                        <pre><code class="javascript">new $.flavr({
+    title       : 'Charlie bit my finger',
+    content     : '&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/_OBlgSz8sSM&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;',
+    buttons     : {
+        close   : {}
+    }
+});</code></pre>
+                    </div>
+                    
+                </div>
+                                
+                
+            </div>
+            <!-- End of Livedemo -->
+            
+        </div>
+        <!-- End of Content -->
+        
+        <!-- Begin comments -->
+        <div class="blockquote">
+            
+            <div class="notifs">
+                Thank you for purchasing <b>flavr</b>. Within the purchase you will get the full source code, 
+                instruction manual & documentation as well as free access to future <b>flavr</b> updates. 
+                If you encounter any problems or have questions once you purchased flavr, feel free to email me at 
+                <a href="mailto:dierg.paradila@gmail.com">dierg.paradila@gmail.com</a>
+            </div>
+                        
+            <div class="action">
+                <a href="http://codecanyon.net/user/dierg/portfolio" class="btn btn-default btn-download filled">Check my Other Items</a>
+            </div>            
+            
+            <!--
+            <div class="quotes">
+                <i class="fa fa-quote-left quote-icon"></i>
+                Well crafted real amazing. Good luck with the sales! - Everyone. 
+                Well crafted real amazing. Good luck with the sales! - Everyone. 
+            </div>
+            -->
+            
+        </div>
+        <!-- End of Blockquote -->
+        
+        <div class="footer">
+            <div class="socials">
+                <a target="_blank" href="https://www.facebook.com/diergparadila" class="facebook-icon"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://twitter.com/diergparadila" class="twitter-icon"><i class="fa fa-twitter"></i></a>
+                <a target="_blank" href="mailto:dierg.paradila@gmail.com" class="email-icon"><i class="fa fa-envelope"></i></a>                
+            </div>
+            <div class="copyright">
+                flavr - Flat jQuery Popup Dialog © 2014 <a href="http://codecanyon.net/user/dierg/portfolio">Dierg Paradila</a>
+            </div>
+        </div>
+        
+    </div>    
+</body>
+
+<!-- BEGIN DEMO PAGE SCRIPT -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.browser.js"></script>    
+<script type="text/javascript" src="js/livedemo.js"></script>
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+    
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- END DEMO PAGE SCRIPT -->
+    
+<!-- BEGIN flavr SCRIPT -->
+<script type="text/javascript" src="flavr/js/flavr.js"></script>
+<!-- END flavr SCRIPT -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        $('.livedemo').livedemo();
+        
+        $('.footer .socials a').on('mouseenter', function(){
+            var animationEnd = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
+            $(this).addClass('swing animated').bind( animationEnd, function(){
+                $(this).removeClass('swing animated');
+            });            
+        });
+        
+        $('.demo-block .demo-actions .btn-demo').on('click', function(e){            
+            e.preventDefault();
+        });
+        
+/*  =========================================================================================
+        flavr Examples
+    =========================================================================================
+*/
+        
+        /*  -------------------------------------------------------------------------------
+                Simple Alert
+            ------------------------------------------------------------------------------- */  
+            $('#demo-alert .demo-actions .btn-demo').on('click', function(){            
+                new $.flavr('Hello World!');        
+            });
+
+        
+        /*  -------------------------------------------------------------------------------
+                Confirm Dialog
+            ------------------------------------------------------------------------------- */  
+            $('#demo-confirm .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content     : 'Are you sure to delete your memories?',
+                    dialog      : 'confirm',
+                    onConfirm   : function(){
+                        alert('Deleted');
+                    },
+                    onCancel    : function(){
+                        alert('Canceled');
+                    }
+                });
+
+            });
+        
+        
+        /*  -------------------------------------------------------------------------------
+                Prompt Dialog
+            ------------------------------------------------------------------------------- */  
+            $('#demo-prompt .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content     : 'How old are you?',
+                    dialog      : 'prompt',
+                    prompt      : { placeholder : 'Enter something' },
+                    onConfirm   : function( $container, $prompt ){
+                        alert( $prompt.val() );
+                        return false;
+                    },
+                    onCancel    : function(){
+                        alert('Canceled');
+                    }
+                });
+
+
+            });
+        
+        /*  -------------------------------------------------------------------------------
+                Multiple Dialog Instance
+            ------------------------------------------------------------------------------- */  
+            $('#demo-multi-instance .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content  : 'Nuff siad, here is the last one', 
+                    position : 'top-right'
+                }, function(){
+                    new $.flavr({
+                        content  : 'The stack is unlimited, pretty cool huh',
+                        position : 'top-left'
+                    }, function(){
+                        new $.flavr({
+                            content  : 'Here is the dialog #3',
+                            position : 'bottom-right'
+                        }, function(){
+                            new $.flavr({
+                                content  : 'Me dialog #2',
+                                position : 'bottom-mid'
+                            }, function(){
+                                new $.flavr({
+                                    content     :'I am dialog #1',
+                                    buttons     : {
+                                        exit    : { text: 'Close All', style: 'danger',
+                                                    action: function(){
+                                                        this.exit();
+                                                    }
+                                        },
+                                        close   : {}
+                                    }
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+
+        
+        /*  -------------------------------------------------------------------------------
+                Multiple Buttons
+            ------------------------------------------------------------------------------- */  
+            $('#demo-multi-buttons .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content     : 'flavr box with multiple buttons',
+                    buttons     : {
+                        primary : { text: 'Primary', style: 'primary', 
+                                    action: function(){
+                                        alert('Primary button');
+                                        return false;
+                                    }
+                        },
+                        success : { text: 'Success', style: 'success',
+                                    action: function(){
+                                        alert('Mission succeed!');
+                                        return false;
+                                    }
+                        },
+                        info    : { text: 'Info', style: 'info',
+                                    action: function(){
+                                        alert('For your information');
+                                        return false;
+                                    }
+                        },
+                        warning : { text: 'Warning', style: 'warning',
+                                    action: function(){
+                                        alert('No good captain!');
+                                        return false;
+                                    }                    
+                        },
+                        danger  : { text: 'Danger', style: 'danger',
+                                    action: function(){
+                                        alert('Mission failed!');
+                                        return false;
+                                    }          
+                        },
+                        close   : { style: 'default' }
+                    }
+                });
+                
+            });
+
+        
+        /*  -------------------------------------------------------------------------------
+                Stacked Buttons
+            ------------------------------------------------------------------------------- */  
+            $('#demo-stacked-buttons .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    buttonDisplay   : 'stacked',
+                    content         : 'flavr with stacked buttons',
+                    buttons         : {                    
+                        confirm     : { style: 'info' },
+                        remove      : { style: 'danger' },
+                        close       : { style: 'default' }
+                    }                
+                });
+
+            });
+
+        
+        /*  -------------------------------------------------------------------------------
+                HTML Dialog
+            ------------------------------------------------------------------------------- */  
+            $('#demo-html .demo-actions .btn-demo').on('click', function(){
+                
+                var html =  
+                '   <div class="form-row">' +                        
+                '       <input type="text" name="username" placeholder="Username" />' +
+                '   </div>' +
+                '   <div class="form-row">' +                        
+                '       <input type="password" name="password" placeholder="Password" />' +
+                '   </div>' +
+                '   <div class="form-row">' +                        
+                '       <input type="checkbox" name="remember" id="check"/>' +
+                '       <label for="check">Remember me</label>' +
+                '   </div>';
+            
+                new $.flavr({                
+                    title       : 'Form',
+                    iconPath    : 'flavr/images/icons/',
+                    icon        : 'email.png',                
+                    content     : 'HTML form example',
+                    dialog      : 'form',
+                    form        : { content: html, method: 'post' },
+                    onSubmit    : function( $container, $form ){
+                        alert( $form.serialize() );
+                        return false;
+                    }            
+                });
+
+            });
+        
+
+        /*  -------------------------------------------------------------------------------
+                Modeless Dialog
+            ------------------------------------------------------------------------------- */
+            var modeless = null;
+            $('#demo-modeless .demo-actions .btn-demo').on('click', function(){
+                modeless = new $.flavr({
+                    modal       : false,
+                    content     : 'This is a modeless dialog'
+                });   
+            }); 
+            $('#demo-modeless .demo-actions .btn-close').on('click', function(e){
+                e.preventDefault();
+                if( null !== modeless ) modeless.close();
+            });
+
+        
+        /*  -------------------------------------------------------------------------------
+                Autoclose Dialog
+            ------------------------------------------------------------------------------- */            
+            $('#demo-autoclose .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content     : 'Autoclosing the dialog in 5 seconds',
+                    autoclose   : true,
+                    timeout     : 5000  /* Default timeout is 3 seconds */
+                });
+ 
+            }); 
+
+        
+        /*  -------------------------------------------------------------------------------
+                Alternative Closing
+            ------------------------------------------------------------------------------- */            
+            $('#demo-alt-closing .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content      : 'Try clicking the overlay or pressing the escape button',
+                    closeOverlay : true,
+                    closeEsc     : true                
+                });
+
+            }); 
+
+        
+        /*  -------------------------------------------------------------------------------
+                CSS3 Animation
+            ------------------------------------------------------------------------------- */            
+            $('#demo-animation .demo-actions .btn-demo').on('click', function(){
+                
+                var select = $(this).parent().siblings('.demo-select');
+                var entrance = select.find('.animate-entrance :selected').text();
+                var closing = select.find('.animate-closing :selected').text();
+                
+                new $.flavr({                
+                    animateEntrance : entrance,
+                    animateClosing  : closing,
+                    content         : 'Animation example'
+                });
+
+
+            });         
+
+        
+        /*  -------------------------------------------------------------------------------
+                Attention Seeker
+            ------------------------------------------------------------------------------- */            
+            $('#demo-attention .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    position        : 'top-mid',                
+                    content         : 'Attention seeker animation examples',                
+                    buttons         : {
+                        swing       : { style: 'info', action: function(){ this.swing(); return false }},
+                        shake       : { style: 'warning', action: function(){ this.shake(); return false }},
+                        wobble      : { style: 'danger', action: function(){ this.wobble(); return false }},
+                        flash       : { style: 'primary', action: function(){ this.flash(); return false }},
+                        tada        : { style: 'info', action: function(){ this.tada(); return false }},
+                        pulse       : { style: 'warning', action: function(){ this.pulse(); return false }},
+                        bounce      : { style: 'danger', action: function(){ this.animate('bounce'); return false }},
+                        close       : {}
+                    }
+                });
+                
+            }); 
+        
+        
+        /*  -------------------------------------------------------------------------------
+                Dynamic Dialog
+            ------------------------------------------------------------------------------- */            
+            $('#demo-dynamic .demo-actions .btn-demo').on('click', function(){
+                
+                new $.flavr({
+                    content     : 'Resize your Dialog',                
+                    buttons     : {
+                        resize  : { text: 'Resize 700 x 300', style: 'info',
+                                    action: function(){
+                                        this.resize( 700, 300 );                                     
+                                        return false 
+                                    }
+                        },
+                        full    : { text: 'Fullscreen', style: 'warning', 
+                                    action: function(){
+                                        this.fullscreen();
+                                        return false
+                                    }
+                        },
+                        revert  : { text: 'Original Size', style: 'danger',
+                                    action: function(){                         
+                                        this.revert();
+                                        return false;
+                                    }
+                        },
+                        change  : { text: 'Change Content', style: 'info',
+                                    action: function(){
+                                        this.content('<p>This is the new content</p><br/><p>New line</p>');                                    
+                                        return false;
+                                    }
+                        },
+                        close   : {}
+                    }
+                });
+                
+            });        
+        
+        
+        /*  -------------------------------------------------------------------------------
+                Callbacks
+            ------------------------------------------------------------------------------- */            
+            var callbackflavr = null;
+            $('#demo-callback .demo-actions .btn-demo').on('click', function(){
+                callbackflavr = new $.flavr({
+                    content     : 'flavr callback examples',
+                    buttons     : {
+                        shake   : { style: 'primary', 
+                                    action: function(){
+                                        this.shake(function(){
+                                            alert('Shake animation callback');
+                                        });
+                                        return false;
+                                    }
+                        },
+                        hide    : { style: 'info', 
+                                    action: function(){
+                                        this.hide();
+                                        return false;
+                                    }
+                        },
+                        close   : { style: 'warning' }
+                    },
+                    onLoad      : function(){
+                        alert('The plugin has been loaded');
+                    },
+                    onBuild     : function(){
+                        alert('We have succesfully build the DOM elements');
+                    },
+                    onShow      : function(){
+                        alert('The dialog has been shown');
+                    },
+                    onHide      : function(){
+                        alert('Now hidding the dialog');
+                    },                
+                    onClose     : function(){
+                        alert('We\'re about to close the dialog');
+                    }
+                });
+            });
+            $('#demo-callback .demo-actions .btn-show').on('click', function(e){
+                e.preventDefault();
+                if( null !== callbackflavr ) callbackflavr.show();
+            });
+        
+        
+        /*  -------------------------------------------------------------------------------
+                Iframe
+            ------------------------------------------------------------------------------- */ 
+            $('#demo-iframe .demo-actions .btn-show').on('click', function(){
+                new $.flavr({
+                    title       : 'Charlie bit my finger',
+                    content     : '<iframe width="420" height="315" src="//www.youtube.com/embed/_OBlgSz8sSM"' + 
+                                    'frameborder="0" allowfullscreen></iframe>',
+                    buttons     : {
+                        close   : {}
+                    }
+                });                
+            });
+        
+    });    
+</script>
+</html>

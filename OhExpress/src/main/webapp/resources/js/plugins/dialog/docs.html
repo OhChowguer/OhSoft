@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+	<meta charset="utf-8" />
+	<title>flavr popup</title>
+    
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel='stylesheet' type='text/css' href='fonts/lato.css'>    
+    
+	<!-- DEMO PAGE CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight/default.css" />    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- END DEMO PAGE CSS -->
+    
+    <!-- FLAVR CSS -->
+    <link rel="stylesheet" type="text/css" href="flavr/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="flavr/css/flavr.css" />
+	<!-- END FLAVR CSS -->
+		
+</head>
+    
+<body class="parent offdocument">
+    <div class="container">                
+        
+        <div class="intro">
+            
+            <nav class="navbar navbar-default demo-navbar" role="navigation">
+                
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">flavr</a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="demo-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./index.html">Demo</a></li>                        
+                        <li class="active dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="docs.html#overview">Overview</a></li>
+                                <li><a href="docs.html#installation">Installation</a></li>
+                                <li><a href="docs.html#get-started">Get Started</a></li>
+                                <li class="divider"></li>
+                                <li><a href="docs.html#available-options">Available Options</a></li>
+                                <li><a href="docs.html#properties">Properties</a></li>
+                                <li><a href="docs.html#helper-methods">Helper Methods</a></li>
+                                <li class="divider"></li>
+                                <li><a href="docs.html#browser-supports">Browser Supports</a></li>
+                                <li><a href="docs.html#product-supports">Product Supports</a></li>
+                                <li><a href="docs.html#credits">Credits</a></li>
+                            </ul>
+                        </li>
+                    </ul>                    
+                </div>                
+            </nav>
+            
+            <div class="row intro-heading">
+                <div class="col-xs-12 left-span">
+                    <h1 class="welcome">flavr documentation</h1>
+                    <div class="overview">
+                        Thank you for purchasing <strong>flavr</strong> from Codecanyon.
+                    </div>
+                </div>
+                
+                <!--
+                <div class="col-xs-4 right-span">                    
+                    <img src="images/demo.png" />                    
+                </div>
+                -->
+                
+            </div>            
+            
+        </div>
+        
+        <div class="content documentation">
+            
+            <!--===============================================================================================================
+                OVERVIEW
+            ================================================================================================================-->
+            <div class="block overview" id="overview">
+                <h2 class="title">Overview</h2>
+
+                <p>
+                    <strong>flavr</strong> is a freshly build stylish popup dialog for your next flat website.
+                    <strong>flavr</strong> is built to be responsive, able to adapt its layout and position to any 
+                    screen size of your viewer with the power of CSS. Just like you, we prefer to avoid javascript 
+                    on things we could do with CSS. Have a read at the documentation below to see the posibilities
+                    of customization you could do with <strong>flavr</strong>, you will love <strong>flavr</strong>
+                    even more.
+                </p>                
+                
+            </div>
+            
+            
+            <!--===============================================================================================================
+                INSTALLATION
+            ================================================================================================================-->
+            <div class="block installation" id="installation">
+                <h2 class="title">Installation</h2>
+                <p><b>flavr</b> requires two essential files and another <b>animate.css</b> to works perfectly with the best user experience.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                        <pre class="pattern"><code class="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/animate.min.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/flavr.css&quot; /&gt;
+    
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/flavr.js&quot;&gt;&lt;/script&gt;</code></pre>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <p><b>animate.css</b> is an awesome CSS3 animation library pack created by <b>Daniel Eden</b>. Head over to his <a href="http://daneden.me/animate">homepage</a> to see more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--===============================================================================================================
+                GET STARTED
+            ================================================================================================================-->
+            <div class="block get-started" id="get-started">
+                <h2 class="title">Getting Started</h2>
+                <p>
+                    <b>flavr</b> is designed to be able to run even with minimal options. 
+                    Here are some examples of Hello World dialog with <b>flavr</b>.
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                        <pre class="pattern"><code class="javascript">new $.flavr('Hello world!');
+new $.flavr('Hello world!', 'Hello world example');
+new $.flavr({ content: 'Hello world!' });</code></pre>
+                        
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            To launch <b>flavr</b>, you have to define at least one parameter. 
+                            <b>flavr</b> uses dynamic pattern, meaning it will automatically detect the type of any given arguments. 
+                            Just like these examples above. 
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <p>
+                            There are two basic patterns you could use to launch a <b>flavr</b> dialog, the inline and the default pattern.
+                        </p>
+                        
+                        <p>Inline pattern:</p>
+                        <pre class="pattern"><code class="ruby">new $.flavr( content:string [,title:string] [,inlineCallback($container)] );</code></pre>
+                        
+                        <p>Default pattern:</p>
+                        <pre class="pattern"><code class="ruby">new $.flavr( options:object [,inlineCallback($container)] );</code></pre>
+                        
+                        <p>
+                            The <code>inlineCallback</code> is a separated callback which is not overriding any conditional callback
+                            and will always be executed after the dialog has been displayed on screen. You will see more callbacks
+                            later in this documentation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--===============================================================================================================
+                OPTIONS
+            ================================================================================================================-->
+            <div class="block options" id="available-options">
+                <h2 class="title">Available Options</h2>
+                <p>Here are all the available options you could pass to <b>flavr</b>.</p>
+                <table class="table">
+                    <tr>
+                        <td><a href="#animation">animated</a></td>
+                        <td>Set to <code>false</code> to disable the entrance and closing CSS3 animation. Default is <code>true</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#animation">animateEntrance</a></td>
+                        <td>Choose the entrance animation. Default entrance animation is <code>'flipInX'</code></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#animation">animateClosing</a></td>
+                        <td>Choose the closing animation. Default closing animation is <code>'fadeOut'</code></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#autoclose">autoclose</a></td>
+                        <td>
+                            Whether to enable a timer that will auto close the dialog after a specific <code>timeout</code>
+                            The default value is <code>false</code>, while the default <code>timeout</code> 
+                            in miliseconds is <code>3000</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#buttons">buttons</a></td>
+                        <td>
+                            Define your own button sets to be added in the dialog.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#buttons">buttonDisplay</a></td>
+                        <td>
+                            Define your buttons will be displayed, either display it inline or stacked. 
+                            The default value is <code>'inline'</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#alt-closing">closeEsc</a></td>
+                        <td>
+                            Whether to let the user to close the dialog by pressing the keyboard Escape button. 
+                            Default is <code>false</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#alt-closing">closeOverlay</a></td>
+                        <td>
+                            Whether to let the user to close the dialog by clicking the wrapping overlay. 
+                            Default value is <code>false</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#html-contents">content</a></td>
+                        <td>This will be your dialog content</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#dialog-types">dialog</a></td>
+                        <td>
+                            Define your dialog type. There are 4 dialog types available to choose, 
+                            they are <code><a href="#dialog-types">alert</a></code>, 
+                            <code><a href="#confirm-dialog">confirm</a></code>, 
+                            <code><a href="#prompt-dialog">prompt</a></code> and 
+                            <code><a href="#form-dialog">form</a></code>
+                            dialog. Each dialog type comes with specific preset buttons and behaviour. 
+                            Preset buttons are overridable. The default dialog type when it wasn't specified is <code>alert</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#form-dialog">form</a></td>
+                        <td>Specify your form properties for a <code><a href="#form-dialog">form</a></code> dialog type only.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#html-contents">html</a></td>
+                        <td>
+                            Whether to let <b>flavr</b> display html contents or not. 
+                            When set to <code>false</code>, any html tags will be converted as encoded html.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#icon">icon</a></td>
+                        <td>
+                            Add an icon to your dialog by providing the icon filename including the file extension. 
+                            The default icon folder is <code>'images/icon/'</code>. 
+                            You could specify your own folder using the following <code>iconPath</code> option.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#icon">iconPath</a></td>
+                        <td>
+                            Override the default icon folder with your own one. 
+                            The default path is <code>'images/icon/'</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#modal-and-overlay">modal</a></td>
+                        <td>
+                            Whether to set your dialog as modal or modeless. 
+                            When set to <code>false</code>, the fullscreen overlay will be removed and the user will be able 
+                            to interact to the rest elements of the page. 
+                            This option is only supported on a browser that supports
+                            <code>pointer-events</code> property.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#modal-and-overlay">opacity</a></td>
+                        <td>
+                            Optionally set a decimal value to override the overlay's opacity. 
+                            The default opacity is 0.4 which is specified within the main stylesheet.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#modal-and-overlay">overlay</a></td>
+                        <td>
+                            Set to <code>false</code> to disable the overlay, while still preventing user interactions
+                            to the rest of the page outside the dialog.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#dialog-position">position</a></td>
+                        <td>
+                            Control your dialog position on screen. By default there are 6 positions available, 
+                            <code>top-left</code>, <code>top-mid</code>, <code>top-right</code>, 
+                            <code>bottom-left</code>, <code>bottom-mid</code> and <code>bottom-right</code>.
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td><a href="#autoclose">timeout</a></td>
+                        <td>
+                            The lifespan of an autoclosed dialog in miliseconds. 
+                            The default <code>timeout</code> is <code>3000</code> (3 seconds).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#html-contents">title</a></td>
+                        <td>
+                            Provide an optional title to your dialog.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#callbacks">onLoad</a></td>
+                        <td>
+                            Set a callback to be called when the plugin has been succesfully loaded for the first time. 
+                            There is no DOM element created at this stage yet.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#callbacks">onBuild</a></td>
+                        <td>
+                            Set a callback to be called when the DOM elements have been created succesfully. 
+                            The dialog is not yet displayed in this stage.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#callbacks">onShow</a></td>
+                        <td>
+                            Set a callback that will be called each time the dialog is displayed on the screen.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#callbacks">onHide</a></td>
+                        <td>
+                            Set a callback that will be called each time the dialog is about to be hidden from the screen.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#callbacks">onClose</a></td>
+                        <td>
+                            Set a callback that will be called when the dialog is about to be closed 
+                            (removed from the document).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#confirm-dialog">onConfirm</a></td>
+                        <td>
+                            Set a callback that will be called when the user has confirmed a 
+                            <code><a href="#confirm-dialog">confirm</a></code>
+                            or <code><a href="#prompt-dialog">prompt</a></code> dialog by clicking the preset confirm button.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#form-dialog">onSubmit</a></td>
+                        <td>
+                            Set a callback that will be called when the user is about to submit the form in a 
+                            <code><a href="#form-dialog">form</a></code> dialog type with preset buttons.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#confirm-dialog">onCancel</a></td>
+                        <td>
+                            Set a callback that will be called when the user has canceled 
+                            <code><a href="#confirm-dialog">confirm</a></code>, 
+                            <code><a href="#prompt-dialog">prompt</a></code> or 
+                            <code><a href="#form-dialog">form</a></code> dialog by pressing the preset cancel button.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            
+            <!--===============================================================================================================
+                PROPERTIES
+            ================================================================================================================-->
+            <div class="block properties" id="properties">
+                <h2 class="title">Properties</h2>
+                <p>All options that are related will be populated and described below.</p>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ANIMATION
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="animation">
+                    
+                    <h3 class="sub-title">Animation</h3>
+                    
+                    <p>Animated example:</p>
+                        
+                    <pre><code class="javascript">new $.flavr({ content: 'Skip animation', animated: false }); </code></pre>
+                    
+                    <p>
+                        By default, <b>flavr</b> dialog is animated using the 
+                        <a target="_blank" href="http://daneden.me/animate/">animate.css</a>. 
+                        Set this option to <code>false</code> to disable animation when the dialog is displayed or hidden.
+                        You could change the entrance and closing animation via 
+                        <code>animateEntrance</code> and <code>animateClosing</code> options.
+                    </p>
+                    
+                    <pre><code class="javascript">new $.flavr({ content: 'Entrance and closing animation', animateEntrance: 'rollIn', animateClosing: 'rollOut' });</code></pre>
+                
+                    <p>
+                        When animated, <code>onShow</code> callback will be delayed and executed after the animation has finished.
+                        To animate the dialog by code use a separated <code><a href="#fn-animate">animate()</a></code> method.
+                    </p>                    
+                </div>
+                
+            
+                <!-------------------------------------------------------------------------------------------------------------
+                    AUTOCLOSED DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="autoclose">
+                    
+                    <h3 class="sub-title">Autoclosing Dialog</h3>
+                    
+                    <p>Usage example:</p>
+                    
+                        <pre><code class="javascript">new $.flavr({ content: 'Autoclosing dialog in 5 seconds', buttons: false, autoclose: true, timeout: 5000 }); </code></pre>
+                    
+                    <p>
+                        Set a timer to automatically close the dialog after a specific duration in milisecond.
+                        By default the <code>autoclose</code> option is set to <code>false</code> 
+                        and the <code>timeout</code> value is <code>3000</code> (3 seconds).
+                    </p>
+                    
+                </div>
+                
+            
+                <!-------------------------------------------------------------------------------------------------------------
+                    BUTTONS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="buttons">
+                    
+                    <h3 class="sub-title">Buttons</h3>
+                    
+                    <p>Buttons example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({ 
+    content : 'Buttons example', 
+    buttons : {
+        submit  : { text: 'Submit Now', style: 'danger', addClass: 'submit-btn', 
+                    action: function( $container, $second, $third ){
+                        alert ('Submit Now');
+                        return false;
+                    }
+        },
+        reset   : function(){
+            alert('Reset and close');
+        }        
+    },
+    buttonDisplay : 'stacked'
+});</code></pre>
+                    
+                    <p>
+                        <b>flavr</b> lets you define your own button set freely anyway you wanted. 
+                        The <code>buttons</code> option is an object containing your buttons and their own properties.
+                        When set to <code>false</code> to create a dialog without any buttons added.
+                    </p>
+                    
+                    <ul>
+                        <li>
+                            <code>text</code> option will be the caption of your button. When this option is not specified, 
+                            your button object key will be used as the caption. 
+                        </li>
+                        <li>
+                            <code>style</code> is a class property that will be applied to your button to customize its style.
+                            All the styles are configured from the main stylesheet. There are 6 styles within the main stylesheet, 
+                            they are <code>default</code>, <code>primary</code>, <code>success</code>, <code>info</code>,
+                            <code>warning</code>, and <code>danger</code>.
+                        </li>
+                        <li>
+                            <code>addClass</code> will let you append other necessary classes to your button.
+                        </li>
+                        <li>
+                            <code>prepend</code> lets you insert HTML element before the button's text, and <code>append</code>
+                            lets you insert HTML after the button's text. 
+                            It is useful in some cases like when you want to add font icon to your button.
+                        </li>
+                        <li>
+                            <code>action</code> is the blockcodes that will be executed when the user has clicked your button.
+                            You will have 2 main references inside this block, 
+                            while there will be other references available for some specific dialog types only.
+                            However, if this <code>action</code> is set to <code>false</code>, 
+                            the button will do nothing but prevents the dialog from closing.
+                            <ul>
+                                <li>
+                                    <code>this</code> will reference directly to the current <b>flavr</b> instance. 
+                                    Remember to always invoke <b>flavr</b> with <code>new</code> prefix to 
+                                    create a new instance of <b>flavr</b> for each dialogs.
+                                </li>
+                                <li>
+                                    The first argument (<code>$container</code>) will reference to the dialog container.
+                                </li>
+                                <li>
+                                    For a confirm dialog, the second (<code>$second</code>)
+                                    argument will reference to the button itself. And the third argument is empty (not available).
+                                </li>                                
+                                <li>
+                                    For a <code>prompt</code> dialog, the second argument (<code>$second</code>)
+                                    will be the input/textbox of your prompt dialog, and the third argument (<code>$third</code>) 
+                                    will reference to the button itself.
+                                </li>
+                                <li>
+                                    As well as for a <code>form</code> dialog, the second argument will reference to the form element,
+                                    and the third argument is the button itself.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            The sub-options are not limited to those options above. Any other given value will be accepted and 
+                            appended as html attribute for the current button. So adding <code>id: 'submit-btn'</code> will do just fine.
+                        </li>
+                        <li>
+                            Alternatively, if you're going to add a button and have no other things to set except the button action, 
+                            you could simply assign your blockcodes directly to the button object, 
+                            just like the <code>reset</code> button we have in the example above.
+                            In this case, the button object key will be used as the button caption.
+                        </li>
+                    </ul>
+                    
+                    <p>
+                        Any button will do close the dialog everytime its <code>action</code> has been executed. 
+                        To abort the closing, add a <code>return false</code> at the end of your code.
+                    </p>
+                    
+                    <p>
+                        Another related option is the <code>buttonDisplay</code> which determines how your buttons will be arranged.
+                        Available options are <code>'inline'</code> and <code>'stacked'</code>.
+                        The default <code>buttonDisplay</code> is <code>'inline'</code>. 
+                    </p>
+                    
+                </div>
+            
+            
+                <!-------------------------------------------------------------------------------------------------------------
+                    ALTERNATIVE CLOSING
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="alt-closing">
+                    
+                    <h3 class="sub-title">Alternative Closing</h3>
+                    
+                    <p>Example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({ 
+    content         : 'Click the overlay or press the Escape button', 
+    buttons         : {
+        nope        : { action: function(){ this.shake(); return false }}
+    },
+    closeOverlay    : true,
+    closeEsc        : true
+});</code></pre>
+                    
+                    <p>
+                        <b>flavr</b> provides you two alternative ways to close your dialog, by clicking the wrapper overlay or 
+                        pressing the escape keyboard button. Both <code>closeOverlay</code> and <code>closeEsc</code>
+                        are set to <code>false</code> by default. To close the dialog by code use 
+                        <code><a href="#fn-close">.close()</a></code>. 
+                        To close all the currently active dialogs use <code><a href="#fn-exit">.exit()</a></code>
+                        or <code><a href="#fn-closeall">.closeAll()</a></code>
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    HTML CONTENTS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="html-contents">
+                    
+                    <h3 class="sub-title">HTML Contents</h3>
+                    
+                    <p>Example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({ 
+    title   : 'How to create hyperlink',
+    content : '&lt;a href=&quot;http://target.com&quot;&gt;link&lt;/a&gt;', 
+    html    : false
+});</code></pre>
+                    
+                    <p>
+                        <b>flavr</b> supports html content by default. 
+                        When set to <code>false</code> any html tags will be 
+                        converted to safe encoded string . 
+                        Only <code>title</code> and <code>content</code> properties that can accept html. 
+                        To retrieve or set dialog's content by code, use <code><a href="#fn-content">.content()</a></code>
+                        To retrieve or set dialog's title use <code><a href="#fn-title">.title()</a></code>
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    DIALOG TYPES
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="dialog-types">
+                    
+                    <h3 class="sub-title">Dialog Types</h3>
+                    
+                    <p>Alert example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr( "'alert' is the default dialog type" );</code></pre>
+                    
+                    <p> 
+                        By default, <b>flavr</b> dialog acts like the vanilla javascript alert popup. However, 
+                        <b>flavr</b> also provides you the
+                        possibilities to create and mimic a confirmation dialog, prompt dialog, or even an advanced login form.
+                        For example, by assigning <code>'confirm'</code> as the dialog type, you could create your own 
+                        confirmation dialog with predefined buttons and behaviour. There are 4 available dialog types to choose,
+                        they are <code>'alert'</code> (default), <code>'<a href="#confirm-dialog">confirm</a>'</code>, 
+                        <code>'<a href="#prompt-dialog">prompt</a>'</code> and <code>'<a href="#form-dialog">form</a>'</code> dialog.
+                    </p>
+
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    CONFIRM DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="confirm-dialog">
+                    
+                    <h3 class="sub-title">Confirm Dialog</h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'Press a button',
+    dialog      : 'confirm',
+    onConfirm   : function( $container ){
+        alert('You pressed Confirm!');
+        return false;
+    },
+    onCancel    : function( $container ){
+        alert('You pressed Cancel');
+    }
+});</code></pre>
+                    
+                    <p> 
+                        Confirm dialog comes with two preset buttons, a Confirm and a Cancel button. 
+                        When the user press the Confirm button, the user defined <code>onConfirm</code> callback
+                        will be executed. As well as when the user press the Cancel button, the <code>onCancel</code>
+                        callback will be executed when specified. This behaviour is only valid for the default preset buttons.
+                        However, when the buttons are overridden you will have to call the callback manually within the button's <code>action</code>.
+                    </p>
+                    
+                    <ul>
+                        <li>
+                            <code>this</code> inside the <code>onConfirm</code> and <code>onCancel</code> will reference to 
+                            the current <b>flavr</b> instance.
+                        </li>
+                        <li>
+                            The first parameter of the function will reference to the container of the dialog. 
+                        </li>
+                        <li>
+                            Add a <code>return false</code> at the end of your code whenever you want to abort the closing after the
+                            callback has been executed.
+                        </li>
+                        <li>
+                            Use <code><a href="#fn-onconfirm">onConfirm()</a></code> and 
+                            <code><a href="#fn-oncancel">onCancel()</a></code> to set or retrive the callback
+                            function manually.
+                        </li>
+                    </ul>
+                    
+                    <p>
+                        Alternatively in a simpler way, you could also write something like this:
+                    </p>
+                    
+                    <pre><code class="javascript">new $.flavr().confirm('Press a button', function(){
+    alert('You pressed Confirm');
+    return false;
+});</code></pre>                    
+                    <p>
+                        You have to declare an empty <b>flavr</b> object first, and then chain it with <code>confirm()</code> method. 
+                        <code>confirm()</code> method is available to chain on an empty <b>flavr</b> object only. 
+                        Here is the <code>confirm()</code> method pattern.
+                    </p>
+                    
+                    <pre class="pattern"><code class="ruby">new $.flavr().confirm( content:string [,title:string] [,onConfirm($container)] [,onCancel($container)] );</code></pre>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    PROMPT DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="prompt-dialog">
+                    
+                    <h3 class="sub-title">Prompt Dialog</h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'Please enter your name',
+    dialog      : 'prompt',
+    prompt      : { value: 'Harry Potter', addClass: 'prompt-name' },
+    onConfirm   : function( $container, $prompt ){
+        alert('Howdy ' + $prompt.val() + ' !');
+        return false;
+    }
+});</code></pre>
+                    
+                    <p> 
+                        Prompt dialog configuration is pretty much the same as Confirm dialog.
+                        It also comes with two preset buttons, a Confirm and a Cancel button. 
+                        When the user press the Confirm button, the user defined <code>onConfirm</code> callback
+                        will be executed. As well as when the user press the Cancel button, the <code>onCancel</code>
+                        callback will be executed when specified. This behaviour is only valid for the default preset buttons.
+                        When the buttons are overridden you will have to call the callback manually within the button's <code>action</code>.
+                    </p>
+                    
+                    <ul>
+                        <li>
+                            Use <code>prompt</code> option to setup the prompt input/textbox properties.                             
+                            <ul>
+                                <li>
+                                    The <code>value</code> sub-option will set the prompt's default value.
+                                </li>
+                                <li>
+                                    <code>addClass</code> will let you append necessary classes.
+                                </li>
+                                <li>
+                                    Any other supplied sub-options are accepted as well, they will be appended as HTML attribute.
+                                    For example, adding <code>placeholder: 'Your name'</code> will add a placeholder to the prompt input.
+                                </li>
+                            </ul>
+                        </li>                            
+                        <li>
+                            <code>this</code> inside <code>onConfirm</code> and <code>onCancel</code> references to 
+                            the current <b>flavr</b> instance.
+                        </li>
+                        <li>
+                            The first argument (<code>$container</code>) of the function will reference to the container of the dialog. 
+                        </li>
+                        <li>
+                            The second argument (<code>$prompt</code>) of the function will reference to the prompt input/textbox.
+                        </li>
+                        <li>
+                            Add a <code>return false</code> at the end of your code whenever you want to abort the closing after the
+                            callback has been executed.
+                        </li>
+                        <li>
+                            Use <code><a href="#fn-onconfirm">onConfirm()</a></code> and 
+                            <code><a href="#fn-oncancel">onCancel()</a></code> to set or retrive the callback
+                            function manually.
+                        </li>
+                    </ul>
+                    
+                    <p>
+                        In a simpler way, you could write something like this:
+                    </p>
+                    
+                    <pre><code class="javascript">new $.flavr().prompt('Harry Potter', 'Please enter your name', 'Test title', function( $cont, $prompt ){
+    alert( 'Howdy, ' + $prompt.val() );    
+    return false;
+});
+</code></pre>
+                    
+                    <p>
+                        You have to declare an empty <b>flavr</b> first, then chain it with <code>prompt()</code> method. 
+                        <code>prompt()</code> method is available to chain on an empty <b>flavr</b> object only. 
+                        Here is the <code>prompt()</code> method pattern. Pass <code>null</code> to the <code>default_value</code>
+                        to leave the prompt empty.
+                    </p>
+                    
+                    <pre class="pattern"><code class="ruby">new $.flavr().prompt( default_value:string [,content:string] [,title:string] [,onConfirm($container, $prompt)] [,onCancel($container, $prompt)] );</code></pre>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    FORM DIALOG
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="form-dialog">
+                    
+                    <h3 class="sub-title">Form Dialog</h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="full javascript">
+var html =  
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;text&quot; name=&quot;username&quot; ' +
+'       placeholder=&quot;Username&quot; /&gt;' +
+'   &lt;/div&gt;' +
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;password&quot; name=&quot;password&quot; ' +
+'       placeholder=&quot;Password&quot; /&gt;' +
+'   &lt;/div&gt;' +
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; ' +
+'       id=&quot;check&quot;/&gt;' +
+'       &lt;label for=&quot;check&quot;&gt;Remember me&lt;/label&gt;' +
+'   &lt;/div&gt;';
+
+new $.flavr({
+    title       : 'Form',
+    content     : 'Please login to continue',
+    dialog      : 'form',
+    form        : { content: html, addClass: 'form-html' },
+    onSubmit    : function( $container, $form ){
+        alert( $form.serialize() );        
+        return false;
+    }
+});</code></pre>
+                    
+                    <p> 
+                        A <code>form</code> dialog comes with two preset buttons, a Submit and a Cancel button.
+                        By default, when the user submit the form or press the Submit button, the <code>onSubmit</code>
+                        callback will be executed. When the user press the Cancel button, the <code>onCancel</code>
+                        callback will be executed. This is the dafault buttons behaviour and will be lost when the buttons are overriden.
+                    </p>
+                    
+                    <ul>
+                        <li>
+                            Use <code>form</code> option to setup the form element properties.                             
+                            <ul>
+                                <li>
+                                    The <code>content</code> sub-option will set the form's content.
+                                </li>
+                                <li>
+                                    <code>addClass</code> will let you append necessary classes.
+                                </li>
+                                <li>
+                                    Any other supplied sub-options are accepted as well, they will be appended as HTML attribute.
+                                    For example, adding <code>method: 'post'</code> will add a method attribute to the form element.
+                                </li>
+                            </ul>
+                        </li>                            
+                        <li>
+                            <code>this</code> inside <code>onSubmit</code> and <code>onCancel</code> references to 
+                            the current <b>flavr</b> instance.
+                        </li>
+                        <li>
+                            The first argument (<code>$container</code>) of the function will reference to the container of the dialog. 
+                        </li>
+                        <li>
+                            The second argument (<code>$form</code>) of the function will reference to the form element.
+                        </li>
+                        <li>
+                            Add a <code>return false</code> at the end of your code whenever you want to abort the closing after the
+                            callback has been executed. Inside the <code>onSubmit</code> callback, <code>return false</code> will halt
+                            the submit proccess to the server.
+                        </li>
+                        <li>
+                            Use <code><a href="#fn-onsubmit">onSubmit()</a></code> and 
+                            <code><a href="#fn-oncancel">onCancel()</a></code> to set or retrive the callback
+                            function manually.
+                        </li>
+                    </ul>                    
+                    
+                    <p>
+                        Alternative syntax
+                    </p>
+                    
+                    <pre><code class="javascript">
+var html =  
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;text&quot; name=&quot;username&quot; ' +
+'       placeholder=&quot;Username&quot; /&gt;' +
+'   &lt;/div&gt;' +
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;password&quot; name=&quot;password&quot; ' +
+'       placeholder=&quot;Password&quot; /&gt;' +
+'   &lt;/div&gt;' +
+'   &lt;div class=&quot;form-row&quot;&gt;' +
+'       &lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; ' +
+'       id=&quot;check&quot;/&gt;' +
+'       &lt;label for=&quot;check&quot;&gt;Remember me&lt;/label&gt;' +
+'   &lt;/div&gt;';
+
+new $.flavr().form( html, 'Please login to continue', 'Form', function( $cont, $form ){
+    alert( $form.serialize() );
+    return false;
+});</code></pre>
+                    
+                    <p>
+                        Pattern
+                    </p>
+                    
+                    <pre class="pattern"><code class="ruby">new $.flavr().form( htmlstring:string [,content:string] [,title:string] [,onSubmit($container, $form)] [,onCancel($container, $form)]);</code></pre>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ICON
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="icon">
+                    
+                    <h3 class="sub-title">Custom Icon</h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'You\'ve got 1 message',
+    iconPath    : 'flavr/images/icons/',
+    icon        : 'star.png',
+    buttons     : {
+        read    : { style: 'info' },
+        later   : { style: 'danger' }
+    }
+});</code></pre>
+                    
+                    <p> 
+                        With <b>flavr</b> it is possible to add custom icon to your dialog. Specify the icon filename including the extension.
+                        By default the icons are stored under <code>'images/icons'</code> directory. 
+                        Use the <code>iconPath</code> property to override the default icon directory path.
+                        All icons are free version and credited to their designers.
+                    </p>
+
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    MODAL AND OVERLAY
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="modal-and-overlay">
+                    
+                    <h3 class="sub-title">Modal and Overlay</h3>
+                    
+                    <p>Modeless dialog example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'I am modeless dialog',
+    modal       : false
+});</code></pre>
+                    
+                    <p> 
+                        <b>flavr</b> dialog is designed to be a modal dialog by default. However you are allowed configure this state
+                        and create your own modeless dialog, the reverse state of a modal dialog. Modeless dialog doesn't restrict 
+                        user interactions to the rest element of the page. This mode is only supported in modern browser that supports
+                        CSS <code>pointer-events</code> property. The fullscreen overlay will be completely removed in modeless dialog.
+                    </p>
+                    
+                    <p>                        
+                        Overlay is the fullscreen layer that separates the dialog with the rest of the page. 
+                        By default the overlay has 0.4 opacity, you could specify your own opacity value via <code>opacity</code> option.
+                    </p>
+                    
+                    <p>User specified opacity example:</p>
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'Simply a lighter overlay',    
+    opacity     : 0.3
+});</code></pre>
+                    
+                    <p>
+                        When set to <code>false</code>, both <code>modal</code> and <code>overlay</code> will remove the fullscreen overlay.
+                        The only difference is, when the <code>overlay</code> is set to <code>false</code>, 
+                        it will remove the fullscreen overlay while still preventing user interactions to the rest element of the page.
+                    </p>
+                    
+                    <p>Disabled overlay example:</p>
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'Dialog with disabled overlay',
+    overlay     : false    
+});</code></pre>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    DIALOG POSITION
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="dialog-position">
+                    
+                    <h3 class="sub-title">Dialog Position</h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'Me at top left',
+    position    : 'top-left'    
+});
+
+new $.flavr({
+    content     : 'Me at top right',
+    position    : 'top-right'    
+});
+
+new $.flavr({
+    content     : 'Me at bottom mid',
+    position    : 'bottom-mid'    
+});
+
+</code></pre>
+                    
+                    <p>                         
+                        The default position for any <b>flavr</b> dialog is on the 
+                        center of your screen. 
+                        However, you could customize your dialog and control its position using the 
+                        <code>position</code> option.
+                        There are 6 position available to choose, they are 
+                        <code>top-left</code>, <code>top-mid</code>, <code>top-right</code>,
+                        <code>bottom-left</code>, <code>bottm-mid</code>, <code>bottom-right</code>.
+                        All of these positions are fully controlled by the power of CSS. 
+                        Just like you, we also hate to use javascript on things we could do with CSS.
+                    </p>
+                    
+                    <p>
+                        To manually change the dialog position on the fly, use <code><a href="#fn-position">position()</a></code> method.
+                    </p>
+                                        
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    CALLBACKS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="callbacks">
+                    
+                    <h3 class="sub-title">Callbacks</h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="full javascript">new $.flavr({
+    content     : 'Callback example',
+    buttons     : {
+        hide    : { style: 'danger', action: function(){ this.hide(); return false }},
+        close   : { style: 'info' }
+    },
+    onLoad      : function(){
+        alert('The plugin has been loaded');
+    },
+    onBuild     : function(){
+        alert('The DOM elements have been created');
+    },
+    onShow      : function(){
+        alert('The dialog is displayed on screen');
+    },
+    onHide      : function(){
+        var flavr = this;
+        alert('Displaying the dialog again after 3 seconds');
+        setInterval(function(){
+            flavr.show();
+        }, 3000);
+    },
+    onClose     : function(){        
+        if(! confirm('Close now?')) return false;
+    }
+});
+</code></pre>
+                    
+                    <p> 
+                        <b>flavr</b> gives you the ability to provide hooks/callbacks at a particular stage in the execution process. 
+                        For example, you might want to execute some codes right after the <b>flavr</b> instance gets loaded, 
+                        or when the dialog is about to be closed, etc. There are 5 different callbacks available at every stage,
+                        they are <code>onLoad</code>, <code>onBuild</code>, <code>onShow</code>, <code>onHide</code>, <code>onClose</code>.
+                    </p>
+                    
+                    <ul>
+                        <li>
+                            <p>
+                                <code>onLoad</code> callback will be executed once, right after the <b>flavr</b> object has been loaded. 
+                                There is no DOM element created at this stage yet. <code>this</code> is the only reference availabe inside
+                                this callback which references to the current <b>flavr</b> instance.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>onBuild</code> callback will be executed once, immediately when all DOM elements 
+                                have been created and appended to the document, however the dialog is not displayed 
+                                on the screen at this stage. <code>this</code> will reference to the current <b>flavr</b> instance.
+                                The first argument will reference to the dialog container. If in some cases you wanted 
+                                to cancel the dialog appearance, simply add a <code>return false</code> at the end of your code block.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>onShow</code> will be executed each time the dialog has successfully displayed on screen.
+                                It means that when you hide the dialog using the <code><a href="#fn-hide">hide()</a></code> method and
+                                then show it again with <code><a href="#fn-show">show()</a></code>, the callback will be executed 
+                                once again.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>onHide</code> will be executed when the dialog is about to be hidden. By returning <code>false</code>
+                                the dialog will abort the hiding proccess, it is useful for example when you have conditional
+                                statement in your code.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>onClose</code> will be executed when the dialog is about to be closed. You can control 
+                                the closing proccess at this stage as well. By adding <code>return false</code>
+                                the dialog will cancel the closing proccess, it is useful when you have conditional
+                                state in your code.
+                            </p>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <!--===============================================================================================================
+                HELPER METHODS
+            ================================================================================================================-->
+            <div class="block helper-methods" id="helper-methods">
+                <h2 class="title">Helper Methods</h2>
+                <p>All helper methods are described below.</p>
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    HIDE()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-hide">
+                    
+                    <h3 class="sub-title"><strong>hide()</strong></h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="javascript">new $.flavr({ 
+    content     : 'Click the overlay to exit', 
+    buttons     : {
+        hide    : function(){
+            this.hide();            
+            return false;                    
+        }
+    },
+    closeOverlay : true
+}); </code></pre>
+                    
+                    <p>
+                        This method lets you hide any displayed dialog. When you hide a displayed dialog and 
+                        an <code>onHide</code> callback is defined,
+                        it will be executed when the dialog is about to be hidden. 
+                        To retrive or attach a new <code>onHide</code> callback to any dialog, 
+                        use the <code><a href="#fn-onhide">onHide()</a></code> method.
+                        Hiding an already hidden dialog using <code>hide()</code> will not trigger the callback twice.                       
+                    </p>
+                                                            
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    SHOW()
+                --------------------------------------------------------------------------------------------------------------->                
+                <div class="sub-block" id="fn-show">
+                    
+                    <h3 class="sub-title"><strong>show()</strong></h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="javascript">new $.flavr({ 
+    content     : 'Click the overlay to exit', 
+    buttons     : {
+        hide    : function(){
+            var flavr = this;
+            flavr.hide();                     
+            setInterval(function(){
+                flavr.show();
+            }, 1000);
+            return false;                    
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+}); </code></pre>
+                    
+                    <p>
+                        <code>show()</code> lets you redisplay any previously hidden dialog. When you redisplay a dialog and 
+                        an <code>onShow</code> callback is defined, it will be executed right after the dialog has displayed 
+                        on the screen. Accidentally calling <code>show()</code>
+                        on an already displayed dialog will not trigger the callback twice. 
+                    </p>
+                    
+                    <p>
+                        To retrive or attach a new <code>onShow</code> callback to a dialog, 
+                        use the <code><a href="#fn-onshow">onShow()</a></code> method.
+                    </p>
+                                                            
+                </div>
+                
+
+                <!-------------------------------------------------------------------------------------------------------------
+                    CLOSE()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-close">
+                    
+                    <h3 class="sub-title"><strong>close()</strong></h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="javascript">new $.flavr({ 
+    content     : 'All these buttons will close this dialog', 
+    buttons     : {
+        close   : { action: function(){
+                        this.close();            
+                    }
+        },
+        destroy : function(){},
+        banish  : {}
+    }    
+}); </code></pre>
+                    
+                    <p>
+                        <code>close()</code> lets you close any dialog regardless of its state, hidden or not. 
+                        <code>close()</code> will fade out the dialog if it is displayed and then remove them from the document.
+                        When you close a dialog and an <code>onClose</code> callback is defined, 
+                        it will be executed when the dialog is about to be closed.
+                    </p>
+                    
+                    <p>
+                        If a dialog is closed this way, it's DOM element will be removed and the current <b>flavr</b> object 
+                        will become void or <code>null</code>, so chaining any methods on a closed dialog object will produce an error.
+                    </p>
+                    
+                    <p>
+                        To retrive or attach a new <code>onClose</code> callback to a dialog, 
+                        use <code><a href="#fn-onclose">onClose()</a></code> method.
+                    </p>
+                                                            
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    CLOSEALL()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-closeall">
+                    
+                    <h3 class="sub-title"><strong>closeAll()</strong></h3>
+                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="javascript">new $.flavr('I\'m the 1st dialog'); 
+new $.flavr('Me the 2nd dialog');
+new $.flavr({
+    content : '3rd dialog',
+    buttons : {
+        closeall    : { text: 'Close All', 
+                        action: function(){
+                            this.closeAll();                            
+                        }        
+        },
+        close   : {}
+    }
+});</code></pre>
+                    
+                    <p>
+                        <code>closeAll()</code> lets you close all the dialogs in the current document.
+                        Any defined <code>onClose</code> callback will be executed as well. 
+                    </p>
+                                                            
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    EXIT
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-exit">
+                    <h3 class="sub-title"><strong>exit()</strong></h3>                                    
+                    <p>
+                        <code>exit()</code> is identical to the <code>closeAll()</code> method above.
+                    </p>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ANIMATE
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-animate">
+                    <h3 class="sub-title"><strong>animate()</strong></h3>                                    
+                    <p>Live example:</p>
+                        
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Animate examples',
+    buttons : {
+        shake   : function(){
+            this.animate('shake', function(){
+                alert('Animation finished');
+            });
+            return false
+        },
+        swing   : function(){
+            this.swing(function(){
+                alert('Animation finished');
+            });
+            return false
+        },
+        close   : {}
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">animate( animation:string [,callback($container)] );</code></pre>
+                    
+                    <p>
+                        <code>animate()</code> lets you animate your dialog custom CSS3 animation from the populer 
+                        <a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a> library. <code>animate()</code>
+                        accepts callback that will be executed after the animation has completed. 
+                        The demo button below will show you the list of all available animations.
+                    </p>
+                    
+                    <p>
+                        <select class="select-anim" style="display:none">
+                            <optgroup label="Attention Seekers">
+                              <option value="bounce">bounce</option>
+                              <option value="flash">flash</option>
+                              <option value="pulse">pulse</option>
+                              <option value="rubberBand">rubberBand</option>
+                              <option value="shake">shake</option>
+                              <option value="swing">swing</option>
+                              <option value="tada">tada</option>
+                              <option value="wobble">wobble</option>
+                            </optgroup>
+
+                            <optgroup label="Bouncing Entrances">
+                              <option value="bounceIn">bounceIn</option>
+                              <option value="bounceInDown">bounceInDown</option>
+                              <option value="bounceInLeft">bounceInLeft</option>
+                              <option value="bounceInRight">bounceInRight</option>
+                              <option value="bounceInUp">bounceInUp</option>
+                            </optgroup>
+
+                            <optgroup label="Bouncing Exits">
+                              <option value="bounceOut">bounceOut</option>
+                              <option value="bounceOutDown">bounceOutDown</option>
+                              <option value="bounceOutLeft">bounceOutLeft</option>
+                              <option value="bounceOutRight">bounceOutRight</option>
+                              <option value="bounceOutUp">bounceOutUp</option>
+                            </optgroup>
+
+                            <optgroup label="Fading Entrances">
+                              <option value="fadeIn">fadeIn</option>
+                              <option value="fadeInDown">fadeInDown</option>
+                              <option value="fadeInDownBig">fadeInDownBig</option>
+                              <option value="fadeInLeft">fadeInLeft</option>
+                              <option value="fadeInLeftBig">fadeInLeftBig</option>
+                              <option value="fadeInRight">fadeInRight</option>
+                              <option value="fadeInRightBig">fadeInRightBig</option>
+                              <option value="fadeInUp">fadeInUp</option>
+                              <option value="fadeInUpBig">fadeInUpBig</option>
+                            </optgroup>
+
+                            <optgroup label="Fading Exits">
+                              <option value="fadeOut">fadeOut</option>
+                              <option value="fadeOutDown">fadeOutDown</option>
+                              <option value="fadeOutDownBig">fadeOutDownBig</option>
+                              <option value="fadeOutLeft">fadeOutLeft</option>
+                              <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                              <option value="fadeOutRight">fadeOutRight</option>
+                              <option value="fadeOutRightBig">fadeOutRightBig</option>
+                              <option value="fadeOutUp">fadeOutUp</option>
+                              <option value="fadeOutUpBig">fadeOutUpBig</option>
+                            </optgroup>
+
+                            <optgroup label="Flippers">
+                              <option value="flip">flip</option>
+                              <option value="flipInX">flipInX</option>
+                              <option value="flipInY">flipInY</option>
+                              <option value="flipOutX">flipOutX</option>
+                              <option value="flipOutY">flipOutY</option>
+                            </optgroup>
+
+                            <optgroup label="Lightspeed">
+                              <option value="lightSpeedIn">lightSpeedIn</option>
+                              <option value="lightSpeedOut">lightSpeedOut</option>
+                            </optgroup>
+
+                            <optgroup label="Rotating Entrances">
+                              <option value="rotateIn">rotateIn</option>
+                              <option value="rotateInDownLeft">rotateInDownLeft</option>
+                              <option value="rotateInDownRight">rotateInDownRight</option>
+                              <option value="rotateInUpLeft">rotateInUpLeft</option>
+                              <option value="rotateInUpRight">rotateInUpRight</option>
+                            </optgroup>
+
+                            <optgroup label="Rotating Exits">
+                              <option value="rotateOut">rotateOut</option>
+                              <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+                              <option value="rotateOutDownRight">rotateOutDownRight</option>
+                              <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                              <option value="rotateOutUpRight">rotateOutUpRight</option>
+                            </optgroup>
+
+                            <optgroup label="Sliders">
+                              <option value="slideInDown">slideInDown</option>
+                              <option value="slideInLeft">slideInLeft</option>
+                              <option value="slideInRight">slideInRight</option>
+                              <option value="slideOutLeft">slideOutLeft</option>
+                              <option value="slideOutRight">slideOutRight</option>
+                              <option value="slideOutUp">slideOutUp</option>
+                            </optgroup>
+
+                            <optgroup label="Specials">
+                              <option value="hinge">hinge</option>
+                              <option value="rollIn">rollIn</option>
+                              <option value="rollOut">rollOut</option>
+                            </optgroup>
+                        </select>
+                        <a href="#" class="btn btn-default btn-demo">Demo</a>
+                    </p>
+                    
+                    <p>
+                        <b>flavr</b> also provided you some shortcut methods for several animations. They are 
+                        <code>bounce()</code>, <code>flash()</code>, <code>pulse()</code>, <code>rubberBand()</code>,
+                        <code>shake()</code>, <code>swing()</code>, <code>tada()</code> and <code>wobble()</code>
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    GETDEFAULTS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-getdefaults">
+                    <h3 class="sub-title"><strong>getDefaults()</strong></h3>                                    
+                    <p>
+                        <code>getDefaults()</code> lets you retrieve the default <b>flavr</b> settings into an object. 
+                    </p>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    GETSETTINGS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-getsettings">
+                    <h3 class="sub-title"><strong>getSettings()</strong></h3>                                    
+                    <p>
+                        <code>getSettings()</code> lets you retrieve the current <b>flavr</b> settings into an object. 
+                    </p>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    WIDTH
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-width">
+                    <h3 class="sub-title"><strong>width()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Width resize',
+    buttons : {
+        width   : function(){
+            alert( 'Dialog\'s width is ' + this.width() + 'px' );
+            return false
+        },
+        resize  : function(){
+            this.width(500);
+            return false
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">width( [value:string] [,callback($container)] );</code></pre>                
+                    
+                    <p>
+                        <code>width()</code> lets you set or retrieve the dialog's width in pixel. If there is no argument given, it
+                        will retrive the dialog's width. Otherwise if a value is given, it will set the dialog's width to the given pixel.
+                        This method also accepts callback and will be executed after the animation has ended. 
+                    </p>
+                    
+                    <p>
+                        You could alternatively assign <code>false</code> to the <code>callback</code> 
+                        to disable the resizing animation. In this case, the callback is not necessary as the resizing occurs instantly.
+                    </p>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    HEIGHT
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-height">
+                    <h3 class="sub-title"><strong>height()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Height resize',
+    buttons : {
+        height  : function(){
+            alert( 'Dialog\'s height is ' + this.height() + 'px' );
+            return false
+        },
+        resize  : function(){
+            this.height(500);
+            return false
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">height( [value:string] [,callback($container)] );</code></pre>                
+                    
+                    <p>
+                        <code>height()</code> lets you set or retrieve the dialog's height in pixel. If there is no argument given, it
+                        will retrive the dialog's height. Otherwise when a value is given, it will set the dialog's height to the given pixel.
+                        This method also accepts callback that will be executed after the animation has ended. 
+                    </p>
+                    
+                    <p>
+                        You can alternatively assign <code>false</code> to the <code>callback</code> 
+                        to disable the resizing animation. Then the callback will be not necessary as the resizing takes no time.
+                    </p>
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    RESIZE
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-resize">
+                    <h3 class="sub-title"><strong>resize()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Resizing example',
+    buttons : {
+        resize  : function(){
+            this.resize(500, 500);
+            return false
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">resize( width:string, height:string [,callback($container)] );</code></pre>
+                    
+                    <p>
+                        <code>resize()</code> lets you resize your dialog to the given width and height. Both <code>width</code>
+                        and <code>height</code> value must be given in order to use this method. When specified, the callback
+                        will be executed after the animation has finished.                                                
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    FULLSCREEN
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-fullscreen">
+                    <h3 class="sub-title"><strong>fullscreen()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Fullscreen dialog',
+    buttons : {
+        fullscreen  : function(){
+            this.fullscreen();
+            return false
+        },
+        close   : {}
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">fullscreen( [callback($container)] );</code></pre>
+                    
+                    <p>
+                        <code>fullscreen()</code> lets you resize the dialog into a fullscreen size.
+                        <code>fullscreen()</code> accepts callback to be executed after the animation has finished.
+                        When set to <code>false</code>, the resizing transition will be disabled.
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    REVERT
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-revert">
+                    <h3 class="sub-title"><strong>revert()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Reverting dialog\'s dimension',
+    buttons : {
+        resize      : function(){
+            this.resize(500, 500);
+            return false
+        },
+        fullscreen  : function(){
+            this.fullscreen();
+            return false
+        },
+        revert      : function(){
+            this.revert();
+            return false;
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">revert( [callback($container)] );</code></pre>
+                    
+                    <p>
+                        <code>revert()</code> lets you revert your dialog to its original state and dimension (width and height).
+                        <code>revert()</code> also accepts callback to be executed after the animation has finished.
+                        When set to <code>false</code>, the reverting animation will be disabled.
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    POSITION
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-position">
+                    <h3 class="sub-title"><strong>position()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content : 'Controlling dialog\'s position',
+    buttons : {
+        topleft     : { text: 'top-left',
+                        action: function(){
+                            this.position('top-left');
+                            return false
+                        }
+        },
+        topright    : { text: 'top-right',
+                        action: function(){
+                            this.position('top-right');
+                            return false
+                        }
+        },
+        bottomleft  : { text: 'bottom-left',
+                        action: function(){
+                            this.position('bottom-left');
+                            return false
+                        }
+        },
+        bottomright : { text: 'bottom-right',
+                        action: function(){
+                            this.position('bottom-right');
+                            return false
+                        }
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">position( [value:string] );</code></pre>
+                    
+                    <p>
+                        <code>position()</code> will let you get or set the dialog's position manually.
+                        Go to <a href="#dialog-position">dialog position</a> to see all available positions.
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    CONTENT
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-content">
+                    <h3 class="sub-title"><strong>content()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    content     : 'Change your dialog\'s content',
+    buttons     : {
+        content : function(){
+            alert( this.content() );
+            return false
+        },
+        change  : function(){
+            this.content('This is a &lt;b&gt;new content&lt;/b&gt;');
+            return false
+        },
+        close   : { style: 'danger' }
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">content( [value:string] [,faded:boolean] );</code></pre>
+                    
+                    <p>
+                        <code>content()</code> lets you retrieve or alter your dialog's content on the fly. 
+                        Set <code>faded</code> to <code>false</code> to disable the fading transition.
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    TITLE
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-title">
+                    <h3 class="sub-title"><strong>title()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({
+    title       : 'Title Example',
+    content     : 'Change your dialog\'s title',
+    buttons     : {
+        title   : function(){
+            alert( this.title() );
+            return false
+        },
+        change  : function(){
+            this.title('This is the New Title');
+            return false
+        },
+        close   : { style: 'danger' }
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">title( [value:string] [,faded:boolean] );</code></pre>
+                    
+                    <p>
+                        <code>title()</code> lets you retrieve or alter your dialog's title on the fly. 
+                        Set <code>faded</code> to <code>false</code> to disable the fading transition.
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    BUTTONS
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-buttons">
+                    <h3 class="sub-title"><strong>buttons()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({    
+    content     : 'Retrieve your dialog buttons',
+    buttons     : {
+        skip    : { style: 'warning', addClass: 'button-skip', action: false },        
+        close   : { style: 'danger', action: false },
+        log     : { text: 'Log buttons', 
+                    action: function(){
+                        console.log( this.buttons() );
+                        alert('The buttons object has been printed to your console');
+                        return false
+                    }
+        }
+    },
+    closeOverlay : true,
+    closeEsc     : true
+});</code></pre>
+                    
+                    <p>
+                        <code>title()</code> lets you retrieve or alter your dialog's title on the fly. 
+                        Set <code>faded</code> to <code>false</code> to disable the fading transition.
+                        
+                        <code>buttons()</code> lets you retrieve your dialog buttons as a collection of jQuery object.
+                        
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    AUTOCLOSE
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-autoclose">
+                    <h3 class="sub-title"><strong>autoclose()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({    
+    content     : 'Press the timeout button',
+    buttons     : {
+        timeout : function(){
+            alert('Closing in 5 seconds');
+            this.autoclose(5000);
+            return false
+        },
+        close   : { style: 'danger' }
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">autoclose( [timeout:integer] [,callback($container)] );</code></pre>
+                    
+                    <p>
+                        <code>autoclose()</code> lets you create a timer that will close the dialog after a specific timeout.
+                        The default <code>timeout</code> is <code>3000</code> miliseconds. 
+                    </p>
+                    <p>
+                        This method also accepts callback that will be
+                        executed when the timeout has elapsed and the dialog is about to be closed. 
+                        If in some cases you need to cancel the closing, add a <code>return false</code> in your callback blockcode.
+                    </p>
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ONSHOW()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-onshow">
+                    <h3 class="sub-title"><strong>onShow()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({    
+    content     : 'Press the timeout button',
+    onShow      : function(){
+        alert('onShow callback');
+    },
+    buttons     : {
+        hide    : function(){
+            var me = this; me.hide();
+            setTimeout(function(){ me.show() }, 3000);
+            return false
+        },
+        update  : function(){
+            this.onShow(function(){
+                alert('This is the new onShow callback');
+            });
+            alert('Callback updated');
+            return false
+        },
+        close   : { style: 'danger' }
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">onShow( [newcallback:function] );</code></pre>
+                    
+                    <p>
+                        <code>onShow()</code> lets you change or retrieve the <code>onShow</code> callback manually
+                        after the initialization. 
+                    </p>                    
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ONHIDE()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-onhide">
+                    <h3 class="sub-title"><strong>onHide()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({    
+    content     : 'Press the timeout button',
+    onHide      : function(){
+        alert('onHide callback');
+    },
+    buttons     : {
+        hide    : function(){
+            var me = this; me.hide();
+            setTimeout(function(){ me.show() }, 3000);
+            return false
+        },
+        update  : function(){
+            this.onHide(function(){
+                alert('This is the new onHide callback');
+            });
+            alert('Callback updated');
+            return false
+        },
+        close   : { style: 'danger' }
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">onHide( [newcallback:function] );</code></pre>
+                    
+                    <p>
+                        <code>onHide()</code> lets you change or retrieve the <code>onHide</code> callback manually
+                        after the initialization. 
+                    </p>                    
+                    
+                </div>
+                
+                                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ONCLOSE()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-onclose">
+                    <h3 class="sub-title"><strong>onClose()</strong></h3>
+                    <p>Live example:</p>
+                    
+                    <pre><code class="javascript">new $.flavr({    
+    content     : 'controlling the onClose callback',
+    onClose     : function(){
+        alert('This is the onClose callback. \nThe closing is canceled within this callback.');
+        return false
+    },
+    buttons     : {
+        update  : function(){
+            this.onClose(function(){
+                alert('This is the new onClose callback. \nThe closing is no longer canceled.');
+            });
+            alert('Callback updated');
+            return false
+        },
+        close   : { style: 'danger' },
+    }
+});</code></pre>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">onClose( [newcallback:function] );</code></pre>
+                    
+                    <p>
+                        <code>onClose()</code> lets you change or retrieve the <code>onClose</code> callback manually
+                        after the initialization. 
+                    </p>                    
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ONCONFIRM()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-onconfirm">
+                    <h3 class="sub-title"><strong>onConfirm()</strong></h3>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">onConfirm( [newcallback:function] );</code></pre>
+                    
+                    <p>
+                        <code>onConfirm()</code> lets you change or retrieve the <code>onConfirm</code> callback manually
+                        after the initialization. <code>onConfirm</code> will be executed when the user press the preset Confirm
+                        button in a <code><a href="#prompt-dialog">prompt</a></code> and <code><a href="#confirm-dialog">confirm</a></code>
+                        dialog.
+                    </p>                    
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ONSUBMIT()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-onsubmit">
+                    <h3 class="sub-title"><strong>onSubmit()</strong></h3>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">onSubmit( [newcallback:function] );</code></pre>
+                    
+                    <p>
+                        <code>onSubmit()</code> lets you change or retrieve the <code>onSubmit</code> callback manually
+                        after the initialization. <code>onSubmit</code> will be executed when the user submit or press the preset
+                        Submit button in a <code><a href="#form-dialog">form</a></code> dialog.
+                    </p>                    
+                    
+                </div>
+                
+                
+                <!-------------------------------------------------------------------------------------------------------------
+                    ONCANCEL()
+                --------------------------------------------------------------------------------------------------------------->
+                <div class="sub-block" id="fn-oncancel">
+                    <h3 class="sub-title"><strong>onCancel()</strong></h3>
+                    
+                    <p>Pattern:</p>
+                    
+                    <pre class="pattern"><code class="ruby">onCancel( [newcallback:function] );</code></pre>
+                    
+                    <p>
+                        <code>onCancel()</code> lets you change or retrieve the <code>onCancel</code> callback manually
+                        after the initialization. <code>onCancel</code> will be executed when the user press the Cancel button
+                        from a <code><a href="#prompt-dialog">prompt</a></code>, <code><a href="#confirm-dialog">confirm</a></code>
+                        or a <code><a href="#form-dialog">form</a></code> dialog.
+                    </p>                    
+                    
+                </div>
+                                
+            </div>
+                        
+            
+            <!--===============================================================================================================
+                BROWSER SUPPORTS
+            ================================================================================================================-->
+            <div class="block browser-supports" id="browser-supports">
+                <h2 class="title">Browser Supports</h2>
+
+                <p>
+                    <strong>flavr</strong> is working in IE8, runs great in all modern browsers. 
+                </p>                
+                
+            </div>
+            
+            
+            <!--===============================================================================================================
+                PRODUCT SUPPORTS
+            ================================================================================================================-->
+            <div class="block product-supports" id="product-supports">
+                <h2 class="title">Product Supports</h2>
+
+                <p>
+                    Thank you again for purchasing <strong>flavr</strong>. Within the purchase you will get a lifetime access 
+                    to the product updates. If you encounter any problems or have questions once you purchased <strong>flavr</strong>,
+                    feel free to email me at <a href="mailto:dierg.paradila@gmail.com">dierg.paradila@gmail.com</a>
+                </p>                
+                
+            </div>
+            
+            
+            <!--===============================================================================================================
+                CREDITS
+            ================================================================================================================-->
+            <div class="block credits" id="credits">
+                <h2 class="title">Credits</h2>
+                
+                <ul>
+                    <li>The awesome animate.css library by <strong>Daniel Eden</strong></li>
+                    <li>Amazing 20 Free social icons by <strong>Denis Shepovalov</strong></li>
+                    <li>Free flat icons part 2 by <strong>Othmane Machrouh</strong></li>
+                </ul>                
+                
+            </div>
+            
+            
+            
+        </div>
+        <!-- End of Content -->
+        
+        <!-- Begin comments -->
+        <div class="blockquote">            
+            
+            <div class="notifs">
+                Thank you for purchasing <b>flavr</b>. Within the purchase you will get the full source code, 
+                instruction manual & documentation as well as free access to future <b>flavr</b> updates. 
+                If you encounter any problems or have questions once you purchased flavr, feel free to email me at 
+                <a href="mailto:dierg.paradila@gmail.com">dierg.paradila@gmail.com</a>
+            </div>
+
+            <div class="action">
+                <a href="http://codecanyon.net/user/dierg/portfolio" class="btn btn-default btn-download filled">Check my Other Items</a>
+            </div>    
+            
+            <!--
+            <div class="quotes">
+                <i class="fa fa-quote-left quote-icon"></i> 
+                Well crafted real amazing. Good luck with the sales! - Everyone. 
+                Well crafted real amazing. Good luck with the sales! - Everyone. 
+            </div>
+            -->
+            
+        </div>
+        <!-- End of Blockquote -->
+        
+        <div class="footer">
+            <div class="socials">
+                <a target="_blank" href="https://www.facebook.com/diergparadila" class="facebook-icon"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://twitter.com/diergparadila" class="twitter-icon"><i class="fa fa-twitter"></i></a>
+                <a target="_blank" href="mailto:dierg.paradila@gmail.com" class="email-icon"><i class="fa fa-envelope"></i></a>                
+            </div>
+            <div class="copyright">
+                flavr - A Flat & Sleek jQuery Popup Dialog  © 2014 Dierg Paradila
+            </div>
+        </div>
+        
+    </div>    
+</body>
+
+<!-- BEGIN DEMO PAGE SCRIPT -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.browser.js"></script>    
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+    
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- END DEMO PAGE SCRIPT -->
+    
+<!-- BEGIN FLAVR SCRIPT -->
+<script type="text/javascript" src="flavr/js/flavr.js"></script>
+<!-- END FLAVR SCRIPT -->
+
+<script type="text/javascript">
+    $(document).ready(function(){                
+        
+        $('.footer .socials a').on('mouseenter', function(){
+            var animationEnd = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
+            $(this).addClass('swing animated').bind( animationEnd, function(){
+                $(this).removeClass('swing animated');
+            });
+        });
+        
+        $('.demo-block .demo-actions .btn-demo').on('click', function(e){            
+            e.preventDefault();
+        });
+        
+        var runwrap = $('<div class="run-wrap"></div>'),
+            runbtn = $('<a href="#" class="btn btn-default btn-xs run-btn">RUN</a>');        
+        $('pre:not(.pattern)').append( runwrap.append( runbtn ));
+        $('pre .run-wrap').on('mouseenter', function(){
+            $(this).find('.run-btn').animate({ opacity: 1 }, 100);            
+        }).on('mouseleave', function(){
+            $(this).find('.run-btn').stop().animate({ opacity: 0.5}, 100);
+        });
+        $('pre .run-btn').on('click', function(e){
+            e.preventDefault();
+            var code = $(this).parent().siblings('code').text();
+            eval( code );
+        });
+        
+        
+        $('#fn-animate .btn-demo').on('click', function(e){
+            e.preventDefault();
+            
+            var select = $(this).prev('select').html();
+            var $content = 
+                '<p>Animation list</p>'+
+                '<form>' +
+                '   <div class="form-row">'+
+                '       <select class="select-anim">'+
+                            select +
+                '       </select>'+                
+                '   </div>'+
+                '</form>';                        
+            
+            new $.flavr({
+                content : $content,
+                buttons : {
+                    animate : function( $cont ){
+                        this.animate( $cont.find('.select-anim :selected').text() );
+                        return false
+                    }                    
+                },
+                closeOverlay : true,
+                closeEsc     : true
+            });
+            
+        });
+        
+    });    
+</script>
+
+</html>
+

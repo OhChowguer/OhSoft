@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="laypadrao" template="/WEB-INF/views/jsp/layout.jsp">
+		<put-attribute name="title" value="Sample Title" />
+		<put-attribute name="header" value="/WEB-INF/views/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/jsp/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/jsp/footer.jsp" />
+	</definition>
+
+	<definition name="layfront"
+		template="/WEB-INF/views/vfront/layfront/layfront.jsp">
+		<put-attribute name="title" value="Sample Title" />
+		<put-attribute name="header" value="/WEB-INF/views/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/jsp/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/jsp/footer.jsp" />
+	</definition>
+
+	<definition name="layshop" template="/WEB-INF/views/vshop/layshop/layshop.jsp">
+		<put-attribute name="title" value="Sample Title" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/vshop/layshop/headershop.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/vshop/layshop/menushop.jsp" />
+		<put-attribute name="menul"
+			value="/WEB-INF/views/vshop/layshop/menulateralshop.jsp" />
+		<put-attribute name="destaques"
+			value="/WEB-INF/views/vshop/layshop/destaque.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="carousel"
+			value="/WEB-INF/views/vshop/layshop/carouselshop.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/vshop/layshop/footershop.jsp" />
+	</definition>
+
+	<definition name="layshopclin" template="/WEB-INF/views/vshop/layshop/layshop.jsp">
+		<put-attribute name="title" value="Sample Title" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/vshop/layshop/headershop.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/vshop/layshop/menushop.jsp" />
+		<put-attribute name="menul"
+			value="/WEB-INF/views/vshop/layshop/menulateralshopclin.jsp" />
+		<put-attribute name="destaques" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="carousel" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/vshop/layshop/footershop.jsp" />
+	</definition>
+
+	<definition name="layclin" template="/WEB-INF/views/jsp/layoutclin.jsp">
+		<put-attribute name="title" value="Nome Padrao" />
+		<put-attribute name="header" value="/WEB-INF/views/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/jsp/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/jsp/footer.jsp" />
+	</definition>
+
+	<!-- Layout de Teste -->
+
+	<definition name="laybase" template="/WEB-INF/views/jsp/laybase.jsp">
+		<put-attribute name="title" value="Nome Padrao" />
+		<put-attribute name="headerone"
+			value="/WEB-INF/views/jsp/headerbaseone.jsp" />
+		<put-attribute name="headertwo"
+			value="/WEB-INF/views/jsp/headerbasetwo.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/jsp/menubase.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/jsp/footerbase.jsp" />
+	</definition>
+
+
+	<!-- Fim Layout de Teste -->
+
+
+
+	<definition name="home" extends="layfront">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/vfront/layfront/headerfront.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vfront/homefront.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/vfront/layfront/footerfront.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/vfront/layfront/home.jsp" />
+	</definition>
+
+	<definition name="registrofront" extends="layfront">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/vfront/layfront/headerfront.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vfront/registrofront.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/vfront/layfront/footerfront.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/vfront/layfront/home.jsp" />
+	</definition>
+
+	<definition name="loginfront" extends="layfront">
+		<put-attribute name="title" value="Oh!Express - Login" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/vfront/layfront/headerfront.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vfront/loginfront.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/vfront/layfront/footerfront.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/vfront/layfront/home.jsp" />
+	</definition>
+
+	<definition name="lojasfront" extends="layfront">
+		<put-attribute name="title" value="Oh!Express - Lojas" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/vfront/layfront/headerfront.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/vfront/lojas.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/vfront/layfront/footerfront.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/vfront/layfront/home.jsp" />
+	</definition>
+
+	<definition name="login" extends="layclin">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+
+	<definition name="menuopc" template="/WEB-INF/views/jsp/menubase.jsp">
+		<put-attribute name="mresumo" value="" />
+		<put-attribute name="mproduto" value="" />
+		<put-attribute name="mpcadastro" value="" />
+		<put-attribute name="mplista" value="" />
+	</definition>
+
+
+	<definition name="userlista" extends="laypadrao">
+		<put-attribute name="title" value="index" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="ul" value="active" />
+				<put-attribute name="u" value="active" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/userlista.jsp" />
+	</definition>
+
+	<definition name="cadUsuario" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Cadastro de Usuario" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="musuario" value="active" />
+				<put-attribute name="mucadastro" value="active" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/cadUsuario.jsp" />
+	</definition>
+
+	<definition name="index" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Resumo" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="resumo" value="active" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/vadmin/index.jsp" />
+	</definition>
+
+	<definition name="cadProduto" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Cadastro de Produto" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mproduto" value="active" />
+				<put-attribute name="mpcadastro" value="active" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/cadProduto.jsp" />
+	</definition>
+
+	<definition name="cadMateriaPrima" extends="laybase">
+		<put-attribute name="title"
+			value="Oh!Express - Cadastro de Meteria prima" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mproduto" value="open" />
+				<put-attribute name="mpcMateriaPrima" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/cadMateriaPrima.jsp" />
+	</definition>
+
+	<definition name="cadEstrutura" extends="laybase">
+		<put-attribute name="title"
+			value="Oh!Express - Cadastro de Estruturas" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/cadEstrutura.jsp" />
+	</definition>
+
+	<definition name="cadCategoriaProduto" extends="laybase">
+		<put-attribute name="title"
+			value="Oh!Express - Cadastro de Categorias de Produto" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/cadCategoriaProduto.jsp" />
+	</definition>
+
+	<definition name="cadLoja" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Cadastro de Loja" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/vadmin/cadLoja.jsp" />
+	</definition>
+
+
+	<definition name="listLoja" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Lista de Lojas" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/vadmin/listLoja.jsp" />
+	</definition>
+
+
+	<definition name="listProduto" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Lista de produtos" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/listProduto.jsp" />
+	</definition>
+
+	<definition name="listCategoria" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Lista de Categoria" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/listCategoria.jsp" />
+	</definition>
+
+
+	<definition name="listCategoriaProduto" extends="laybase">
+		<put-attribute name="title" value="Oh!Express - Lista de Categoria de Produto" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/listCategoriaProduto.jsp" />
+	</definition>
+
+	<definition name="cadItemProd" extends="laybase">
+		<put-attribute name="title"
+			value="Oh!Express - Cadastro de itens do produto" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/cadItemProduto.jsp" />
+	</definition>
+
+
+	<definition name="listItemProd" extends="laybase">
+		<put-attribute name="title"
+			value="Oh!Express - Lista de itens do produto" />
+		<put-attribute name="menu">
+			<definition extends="menuopc">
+				<put-attribute name="mEstrutura" value="open" />
+				<put-attribute name="meCadastro" value="open" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/vadmin/listItemProduto.jsp" />
+	</definition>
+
+	<definition name="loja" extends="layshop">
+		<put-attribute name="title" value="Oh!Express - Lojas" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/loja.jsp" />
+	</definition>
+	
+		<definition name="lojaporcat" extends="layshop">
+		<put-attribute name="title" value="Oh!Express - Lojas por categoria" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/lojaporcat.jsp" />
+	</definition>
+
+	<definition name="shoproduto" extends="layshop">
+		<put-attribute name="title" value="Oh!Express - Produto" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/produto.jsp" />
+	</definition>
+
+	<definition name="shopedido" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Pedido" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/pedido.jsp" />
+		<put-attribute name="menul" value="" />
+	</definition>
+
+	<definition name="shopedidoconfirm" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Pedido" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vshop/confirmacao.jsp" />
+
+	</definition>
+
+	<definition name="404" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Erro!404" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/404.jsp" />
+	</definition>
+
+	<definition name="editconfig" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Configurações" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vshop/editconfig.jsp" />
+	</definition>
+
+	<definition name="historicoPedido" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Histórico de Pedidos" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vshop/historicopedido.jsp" />
+	</definition>
+
+	<definition name="minhaConta" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Minha Conta" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/vshop/minhaconta.jsp" />
+	</definition>
+
+
+	<definition name="shopregistro" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Registro" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/registro.jsp" />
+		<put-attribute name="menul" value="" />
+	</definition>
+
+
+	<definition name="shoplogin" extends="layshopclin">
+		<put-attribute name="title" value="Oh!Express - Login" />
+		<put-attribute name="body" value="/WEB-INF/views/vshop/login.jsp" />
+		<put-attribute name="menul" value="" />
+	</definition>
+
+
+
+</tiles-definitions>  
