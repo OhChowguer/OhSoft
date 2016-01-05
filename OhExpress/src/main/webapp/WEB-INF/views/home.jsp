@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<!-- Main content starts -->
+<!-- Main content starts Eduardo Baitola-->
 
 <div class="content">
 	<!-- Main bar -->
@@ -16,7 +16,7 @@
 
 			<!-- Breadcrumb -->
 			<div class="bread-crumb pull-right">
-				<a href="index.html"><i class="fa fa-home"></i> Home</a>
+				<a href="index.html"><i class="fa fa-home"></i> Home Eduardo afeminado</a>
 				<!-- Divider -->
 				<span class="divider">/</span> <a href="#" class="bread-current">Dashboard</a>
 			</div>
