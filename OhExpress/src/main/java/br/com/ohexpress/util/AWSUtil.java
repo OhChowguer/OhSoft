@@ -35,7 +35,7 @@ public class AWSUtil {
   
  
   
-  AmazonS3 s3client = new AmazonS3Client(new BasicAWSCredentials("AKIAIPE62OAH62VBO7CQ", "I2a9QMDEUytLFFDVjwj/rl8tzp2f25m+PtZg6E8c"));
+  AmazonS3 s3client = new AmazonS3Client(new BasicAWSCredentials("???", "???"));
   try 
   {
             System.out.println("Uploading a new object to S3 from a file\n");
